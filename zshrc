@@ -1,4 +1,3 @@
-HELPDIR=/home/jeff/.linuxbrew/share/zsh/help
 
 
 # Path to your oh-my-zsh configuration.
@@ -124,22 +123,31 @@ export PATH="/home/jeff/tahoe/tahoe-lafs-i2p/bin:${PATH}"
 
 export PATH=$HOME/.shadown/bin:$PATH
 
-
-
-export PATH="$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$PATH"
-export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
-export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-
-
-fpath=(/home/jeff/.linuxbrew/share/zsh-completions $fpath)
-source /home/jeff/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export USE_HOMEBREW='no'
 
 # monotone
 export LG2=en
 
+#function zle-line-init () { echoti smkx }
+#function zle-line-finish () { echoti rmkx }
+#zle -N zle-line-init
+#zle -N zle-line-finish
 
-source /home/jeff/.livecodingrc
-export HOMEBREW_EDITOR=nano
+export TERM=xterm-256color
+#export TERM=xterm
+fpath=(/home/jeff/.linuxbrew/share/zsh-completions $fpath)
+source /home/jeff/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/share/pkgconfig:/usr/lib/pkgconfig
 
+function brew () {
+	if [ "x$USE_HOMEBREW" != "xyes" ] ; then
+		export HELPDIR=/home/jeff/.linuxbrew/share/zsh/help
+		export PATH="$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$PATH"
+		export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+		export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+		export HOMEBREW_EDITOR=nano
+		export USE_HOMEBREW="yes"
+		echo "brew now enabled"
+	fi
+	$HOME/.linuxbrew/bin/brew $@
+}
