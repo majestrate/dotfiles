@@ -18,7 +18,5 @@ with open('/root/ftpauth.txt') as f:
 auth.add_anonymous(rootdir)
 handler = FTPHandler
 handler.authorizer = auth
-with open('/root/ftpaddr.txt') as f:
-    addr = f.read().strip()
-server = FTPServer((addr, 21), handler)
+server = FTPServer(('[::]%tun0', 0, 0, 21), handler)
 server.serve_forever()
