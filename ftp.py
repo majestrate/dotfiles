@@ -14,7 +14,7 @@ with open('/root/ftpauth.txt') as f:
         if ':' in line:
             idx = line.index(':')
             user, passwd = line[:idx], line[1+idx:]
-            auth.add_user(user, passwd, rootdir, perm="xelradfmw")
+            auth.add_user(user, passwd, rootdir, perm="Melradfmw")
 auth.add_anonymous(rootdir)
 handler = FTPHandler
 handler.authorizer = auth
