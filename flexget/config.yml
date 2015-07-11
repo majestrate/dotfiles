@@ -1,0 +1,225 @@
+
+templates:
+
+  defaults:
+    proxy: 
+      http: http://127.0.0.1:8118/
+      https: http://127.0.0.1:8118/
+
+    transmission:
+      host: 10.0.3.33
+      port: 9091
+      path: /mnt/storage/contents/downloads
+      ratio: 10
+
+  music:
+    proxy: 
+      http: http://127.0.0.1:8118/
+      https: http://127.0.0.1:8118/
+
+    transmission:
+      host: 10.0.3.33
+      port: 9091
+      path: /mnt/storage/contents/music
+      ratio: 1
+
+    regexp:
+      reject: 
+        - mp4
+        - flac
+
+  aviguy:
+    if: 
+      - "'AVIGUY' in author": accept
+
+  loadstone:
+    if: 
+      - "'loadstone' in author": accept
+
+  trymes:
+    if:
+      - "'TryMeS' in author and '720p' in title": accept
+
+  lol:
+    if:
+      - "'-LOL' in title": accept
+  eztv:
+    if:
+      - "'EZTV' in author":  accept
+
+  ettv:
+    if:
+      - "'ettv' in author": accept
+        
+  vtv:
+    if:
+      - "'VTV' in author" : accept 
+
+  bozx:
+    if:
+      - "'BOZX' in author" : accept
+
+  commie:
+    regexp:
+      accept:
+        - ^\[Commie\]    
+
+  deadfish:
+    regexp:
+      accept:
+        - ^\[DeadFish\]
+      reject:
+        - \[400p\]
+        - \[480p\]
+        - \[1080p\]
+        - \[360p\]
+
+  anime-koi:
+    regexp:
+      accept:
+        - ^\[Anime-Koi\]
+      reject:
+        - \[400p\]
+        - \[480p\]
+        - \[1080p\]
+        - \[360p\]
+
+  underwater:
+    regexp:
+      accept:
+        - ^\[Underwater\]
+  otakumura:
+    regexp:
+      accept:
+        - ^\[OtakuMura\]
+  vivid:
+    regexp:
+      accept:
+        - ^\[Vivid\]
+  chihiro:
+    regexp:
+      accept:
+        - ^\[Chihiro\]
+      reject:
+        - \.mp4  
+        - \[480p\]
+  chyuu:
+    regexp:
+      accept:
+        - ^\[Chyuu\]
+      reject:
+        - \[480p\]
+  fff:
+    regexp:
+      accept:
+        - ^\[FFF
+  
+  horrible:
+    regexp:
+      accept:
+        - ^\[HorribleSubs\]
+      reject:
+        - \[400p\]
+        - \[480p\]
+        - \[1080p\]
+        - \[360p\]
+
+tasks:
+
+  akagami:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Shirayuki
+    template:
+      - defaults
+      - horrible
+
+  chaos-dragon:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=chaos+dragon
+    template:
+      - defaults
+      - horrible
+
+  Kouhosei:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=kouhosei
+    template:
+      - defaults
+      - horrible
+      
+  yuusha:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Rokka+no+Yuusha
+    template:
+      - defaults
+      - horrible
+  
+  okusama:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=okusama+uncensored
+    template:
+      - defaults
+      - horrible
+
+  laplace:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=laplace
+    template:
+      - defaults
+      - horrible
+
+  kyoukai:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=kyoukai
+    template:
+      - defaults
+      - horrible
+ 
+  snk:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=shingeki+no+kyojin
+    template:
+      - defaults
+      - horrible
+  
+  yamada-kun:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=yamada
+    template:
+      - defaults
+      - horrible
+
+  gate:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=gate
+    template: 
+      - defaults
+      - horrible
+      
+  seraph-the-end:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=seraph
+    template:
+      - defaults
+      - horrible
+
+  sensen:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=kekkai+sensen
+    template:
+      - defaults
+      - deadfish
+
+
+  psytrance-kat:
+    rss: http://kickass.to/usearch/psytrance/?rss=1&categoires[]=music
+    template:
+      - music
+    accept_all: yes
+
+  real-time:
+    rss: http://kickass.to/usearch/real%20time%20category%3Atv/?rss=1
+    template: 
+      - defaults
+      - trymes
+
+
+  the-daily-show-kat:
+    rss: http://kickass.to/usearch/the%20daily%20show%20category%3Ausearch%20category%3Atv/?rss=1
+    template:
+      - defaults
+      - vtv
+
+  last-week-tonight:
+    rss: http://kickass.to/usearch/Last%20Week%20Tonight/?rss=1
+    template:
+      - defaults
+      - vtv
