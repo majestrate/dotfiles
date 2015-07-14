@@ -168,6 +168,12 @@ tasks:
       - defaults
       - horrible
  
+  dragonball:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=dragon+ball
+    template:
+      - defaults
+      - deadfish
+ 
   snk:
     rss: http://www.nyaa.se/?page=rss&cats=1_37&term=shingeki+no+kyojin
     template:
@@ -198,6 +204,11 @@ tasks:
       - defaults
       - deadfish
 
+  god-eater:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=god+eater
+    template:
+      - defaults
+      - horrible
 
   psytrance-kat:
     rss: http://kickass.to/usearch/psytrance/?rss=1&categoires[]=music
