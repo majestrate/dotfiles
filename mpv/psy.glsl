@@ -1,5 +1,9 @@
 
 
+// psy.glsl
+// copywrong you're mom 2015
+// > still having software licenses
+
 // do psy effect on 1 value
 float psy(float val, float mag, float thresh)
 {
