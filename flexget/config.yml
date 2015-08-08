@@ -204,15 +204,15 @@ tasks:
       - defaults
       - vtv
 
-
-  the-daily-show-kat:
-    rss: http://kickass.to/usearch/the%20daily%20show%20category%3Ausearch%20category%3Atv/?rss=1
-    template:
-      - defaults
-      - vtv
-
   last-week-tonight:
     rss: http://kickass.to/usearch/Last%20Week%20Tonight/?rss=1
     template:
       - defaults
       - vtv
+
+  weeklywipe:
+    rss: http://kickass.to/usearch/weekly%20wipe/?rss=1
+    template:
+      - defaults
+      - eztv
+
