@@ -114,8 +114,8 @@ export PATH=$HOME/source/rpi-tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-ra
 
 export PATH=$HOME/source/nacl_sdk:$PATH
 
-export http_proxy=http://127.0.0.1:8118/
-export https_proxy=http://127.0.0.1:8118/
+export http_proxy=http://10.0.3.1:8118/
+export https_proxy=http://10.0.3.1:8118/
 
 export PATH=$HOME/local/bin:$PATH
 
