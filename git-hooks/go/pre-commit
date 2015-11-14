@@ -1,0 +1,10 @@
+#!/bin/bash -e
+# redirect
+exec 1>&2
+
+go install
+if [ $? != 0 ]  ; then
+    echo "does not compile"
+    exit 1
+fi
+echo "we gud"
