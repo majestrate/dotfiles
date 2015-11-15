@@ -4,7 +4,7 @@ from pyftpdlib.authorizers import DummyAuthorizer
 from pyftpdlib.handlers import FTPHandler
 from pyftpdlib.servers import FTPServer
 
-rootdir = '/var/www'
+rootdir = '/var/www/i2p.rocks'
 auth = DummyAuthorizer()
 with open('/root/ftpauth.txt') as f:
     for line in f:
