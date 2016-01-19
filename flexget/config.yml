@@ -1,4 +1,5 @@
 
+
 templates:
 
   defaults:
@@ -113,7 +114,12 @@ templates:
     regexp:
       accept:
         - ^\[FFF
-  
+
+  horrible-manga:
+    regexp:
+      accept:
+        - ^\[HorribleScans\]
+        
   horrible:
     regexp:
       accept:
@@ -138,30 +144,6 @@ tasks:
       - defaults
       - horrible
       
-  yuusha:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Rokka+no+Yuusha
-    template:
-      - defaults
-      - horrible
-  
-  okusama:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=okusama+uncensored
-    template:
-      - defaults
-      - horrible
-
-  laplace:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=laplace
-    template:
-      - defaults
-      - horrible
-
-  kyoukai:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=kyoukai
-    template:
-      - defaults
-      - horrible
- 
   dragonball:
     rss: http://www.nyaa.se/?page=rss&cats=1_37&term=dragon+ball
     template:
@@ -217,6 +199,42 @@ tasks:
       - defaults
       - horrible
 
+  lance-n:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=lance+n
+    template:
+      - defaults
+      - horrible
+
+  dimw:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=dimension+w
+    template:
+      - defaults
+      - horrible
+
+  Grimgar:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Grimgar
+    template:
+      - defaults
+      - horrible
+
+  new-gate-manga:
+    rss: http://www.nyaa.se/?page=rss&cats=2_12&term=new+gate
+    template:
+      - defaults
+    accept_all: yes
+
+  gate-manga:
+    rss: http://www.nyaa.se/?page=rss&cats=2_12&term=gate+jsdf
+    template:
+      - default
+    accept_all: yes
+    
+  titan-manga:
+    rss: http://www.nyaa.se/?page=rss&cats=2_12&term=attack+on
+    template:
+      - defaults
+      - horrible-manga
+    
 #  Psytrance-kat:
 #    rss: http://kat.cr/usearch/psytrance/?rss=1&categoires[]=music
 #    template:
