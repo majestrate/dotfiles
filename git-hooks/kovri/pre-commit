@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+cpplint=$HOME/.local/bin/cpplint
+for f in $(find . | grep -E '\.(h|cpp)$') ; do $cpplint $f ; done
