@@ -1,4 +1,6 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+#
 from cjdnsadmin import connectWithAdminInfo as connect
 
 s = connect()
@@ -27,4 +29,4 @@ if rx > 1024:
     rx /= 1024
     rxu = "G"
 
-print('^ %.2f %sBps | v %.2f %sBps'%(tx,txu,rx,rxu))
+print('↑ %.2f %sBps | ↓ %.2f %sBps'%(tx,txu,rx,rxu))
