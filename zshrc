@@ -42,12 +42,12 @@ ZSH_THEME="jreese"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(python git youtube-dl ubuntu brew)
+plugins=(python youtube-dl ubuntu brew git-custom)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$HOME/source/depot_tools:/home/jeff/.local/bin:/home/jeff/jython/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH
+export PATH=/home/jeff/.local/bin:/home/jeff/jython/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH
 #export EDITOR=/usr/bin/zile
 
 #alias nano=$EDITOR
@@ -67,19 +67,17 @@ export JYTHONPATH="$CLASSPATH"
 export GEM_HOME=$HOME/.gem
 export PATH=/usr/local/cuda/bin:$GEM_HOME/bin:$PATH
 export PATH=$HOME/source/maven/bin:$PATH
-export PATH=$HOME/.gem/ruby/1.9.1/bin:$PATH
 export MANPATH=$HOME/.local/share/man:/usr/share/man:/usr/local/share/man:/usr/man
 
 #source $HOME/.sysidk/sysidk.rc
 #alias vi=$HOME/local/bin/vim
 #alias emacs=$HOME/local/bin/emacs
 
-export PATH=$HOME/source/depot_tools:$PATH
-source $HOME/.nvm/nvm.sh
+#export PATH=$HOME/source/depot_tools:$PATH
 export PATH=$HOME/i2p:$PATH
 
 
-export GOPATH=$HOME/src/go
+export GOPATH=$HOME/git/go
 export GOROOT=$HOME/source/go
 export GOOS=linux
 export GOARCH=amd64
@@ -133,11 +131,11 @@ export LG2=en
 #zle -N zle-line-init
 #zle -N zle-line-finish
 
-export TERM=xterm-256color
+export TERM=screen-256color
 #export TERM=xterm
 fpath=(/home/jeff/.linuxbrew/share/zsh-completions $fpath)
 source /home/jeff/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
+#export PATH=$HOME/.linuxbrew/Cellar/iojs/2.3.4/bin:$PATH
 
 function brew () {
 	if [ "x$USE_HOMEBREW" != "xyes" ] ; then
@@ -147,7 +145,14 @@ function brew () {
 		export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 		export HOMEBREW_EDITOR=nano
 		export USE_HOMEBREW="yes"
+    export GOROOT=$HOME/.linuxbrew/opt/go/libexec
+		export PATH=$GOROOT/bin:$PATH
 		echo "brew now enabled"
 	fi
 	$HOME/.linuxbrew/bin/brew $@
 }
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH=$HOME/local/archlinux/bin:$PATH
+export PATH=$HOME/bin:$PATH
+
