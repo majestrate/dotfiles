@@ -211,6 +211,12 @@ tasks:
       - defaults
       - horrible
 
+  ass-class:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Assassination
+    template:
+      - defaults
+      - horrible
+
   Grimgar:
     rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Grimgar
     template:
