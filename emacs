@@ -42,8 +42,8 @@
 (add-hook 'go-mode-hook (lambda ()
                           (setq tab-width 2)))
 
-(add-hook 'go-mode-hook (lambda ()
-                          (setq indent-tabs-mode nil)))
+;;(add-hook 'go-mode-hook (lambda ()
+;;                          (setq indent-tabs-mode nil)))
 
 ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 ;;(add-hook 'ruby-mode-hook 'ruby-electric-mode)
