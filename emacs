@@ -24,11 +24,11 @@
 (setq-default js-indent-level 2)
 
 ;;(require 'go-autocomplete)
-;;(require 'go-autocomplete)
-;;(require 'auto-complete-config)
-;;(define-key ac-mode-map (kbd "S-TAB") 'auto-complete)
+(require 'go-autocomplete)
+(require 'auto-complete-config)
+(define-key ac-mode-map [(backtab)] 'auto-complete)
 
-(define-key read-expression-map [(tab)] 'hippie-expand)
+;;(define-key read-expression-map [(tab)] 'hippie-expand)
 ;;(global-set-key (kbd "TAB") 'fancy-tab)
 
 ;;(add-hook 'write-contents-hooks (lambda () (tabify (point-min) (point-max))))
@@ -48,10 +48,17 @@
 ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 ;;(add-hook 'ruby-mode-hook 'ruby-electric-mode)
 ;;(add-hook 'php-mode-hook 'whitespace-mode)
-(add-hook 'c++-mode-hook 'column-highlight-mode)
-(add-hook 'c++-mode-hook 'column-enforce-mode)
+;;(add-hook 'c++-mode-hook 'column-highlight-mode)
+;;(add-hook 'c++-mode-hook 'column-enforce-mode)
 ;;(require 'minimap)
 ;;(whitespace-mode)
+
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.css'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.php'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.js'" . web-mode))
+(setq web-mode-enable-css-colorization t)
 
 (defun toggle-fullscreen ()
   "Toggle full screen on X11"
@@ -61,8 +68,11 @@
      nil 'fullscreen
      (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
 
+(add-to-list 'default-frame-alist
+             '(font . "Inconsolata-12:width=condensed:weight=light"))
 (global-set-key [f11] 'toggle-fullscreen)
 (toggle-fullscreen)
+
 
 (global-set-key [f10] 'minimap-toggle)
 (custom-set-variables
@@ -70,7 +80,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ac-expand-on-auto-complete nil)
+ ;;'(ac-expand-on-auto-complete nil)
  '(c-indent-comment-alist
    (quote
     ((anchored-comment column . 0)
@@ -91,6 +101,16 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
+(global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "S-C-<down>") 'shrink-window)
+(global-set-key (kbd "S-C-<up>") 'enlarge-window)
+
+(global-set-key (kbd "s-<up>") 'windmove-up)
+(global-set-key (kbd "s-<down>") 'windmove-down)
+(global-set-key (kbd "s-<right>") 'windmove-right)
+(global-set-key (kbd "s-<left>") 'windmove-left)
 
 (load-theme 'jeff)
 

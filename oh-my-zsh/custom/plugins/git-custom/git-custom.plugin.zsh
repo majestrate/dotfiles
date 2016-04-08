@@ -6,6 +6,23 @@ zstyle -s ":vcs_info:git:*:-all-" "command" _omz_git_git_cmd
 # Functions
 #
 
+
+#
+# wrapper for git command
+#
+__git(){
+  if [[ "$1" == "commit" || "$1" == "merge" || "$1" == "cherry-pick" ]] ; then
+    $HOME/local/bin/git $@ -S
+  else
+    if [[ "$1" == "tag" ]] ; then
+      $HOME/local/bin/git $@ -s
+    else
+      $HOME/local/bin/git $@
+    fi
+  fi
+}
+
+
 # The name of the current branch
 # Back-compatibility wrapper for when this function was defined here in
 # the plugin, before being pulled in to core lib/git.zsh as git_current_branch()
@@ -23,12 +40,12 @@ function current_repository() {
 # Pretty log messages
 function _git_log_prettily(){
   if ! [ -z $1 ]; then
-    git log --pretty=$1
+    $HOME/local/bin/git log --pretty=$1
   fi
 }
 # Warn if the current branch is a WIP
 function work_in_progress() {
-  if $(git log -n 1 2>/dev/null | grep -q -c "\-\-wip\-\-"); then
+  if $($HOME/local/bin/git log -n 1 2>/dev/null | grep -q -c "\-\-wip\-\-"); then
     echo "WIP!!"
   fi
 }
@@ -37,6 +54,8 @@ function work_in_progress() {
 # Aliases
 # (sorted alphabetically)
 #
+
+alias git='__git'
 
 alias g='git'
 
@@ -73,7 +92,7 @@ alias gco='git checkout'
 alias gcount='git shortlog -sn'
 compdef gcount=git
 alias gcp='git cherry-pick'
-alias gcs='git commit -S'
+#alias gcs='git commit -S'
 
 alias gd='git diff'
 alias gdca='git diff --cached'
@@ -146,15 +165,15 @@ alias gke='\gitk --all $(git log -g --pretty=format:%h)'
 compdef _git gke='gitk'
 
 alias gl='git pull'
-alias glg='git log --stat'
-alias glgp='git log --stat -p'
-alias glgg='git log --graph'
+alias glg='git log --stat --color'
+alias glgp='git log --stat --color -p'
+alias glgg='git log --graph --color'
 alias glgga='git log --graph --decorate --all'
 alias glgm='git log --graph --max-count=10'
-alias glo='git log --oneline --decorate'
+alias glo='git log --oneline --decorate --color'
 alias glol="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias glola="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all"
-alias glog='git log --oneline --decorate --graph'
+alias glog='git log --oneline --decorate --color --graph'
 alias glp="_git_log_prettily"
 compdef _git glp=git-log
 
@@ -213,5 +232,9 @@ alias gup='git pull --rebase'
 alias gupv='git pull --rebase -v'
 alias glum='git pull upstream master'
 
+alias gvt='git verify-tag'
+
 alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit -m "--wip--"'
+
+

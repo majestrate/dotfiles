@@ -7,7 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="jreese"
+ZSH_THEME="ayyy"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -42,12 +42,12 @@ ZSH_THEME="jreese"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(python youtube-dl ubuntu brew git-custom)
+plugins=(python ubuntu brew git-custom rails-custom ruby)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/home/jeff/.local/bin:/home/jeff/jython/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH
+#export PATH=/home/jeff/.local/bin:/home/jeff/jython/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH
 #export EDITOR=/usr/bin/zile
 
 #alias nano=$EDITOR
@@ -78,7 +78,7 @@ export PATH=$HOME/i2p:$PATH
 
 
 export GOPATH=$HOME/git/go
-export GOROOT=$HOME/source/go
+export GOROOT=$HOME/local/go/root
 export GOOS=linux
 export GOARCH=amd64
 export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
@@ -112,10 +112,10 @@ export PATH=$HOME/source/rpi-tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-ra
 
 export PATH=$HOME/source/nacl_sdk:$PATH
 
-export http_proxy=http://10.0.3.1:8118/
-export https_proxy=http://10.0.3.1:8118/
+#export http_proxy=http://10.0.3.1:8118/
+#export https_proxy=http://10.0.3.1:8118/
 
-export PATH=$HOME/local/bin:$PATH
+#export PATH=$HOME/local/bin:$PATH
 
 export PATH="/home/jeff/tahoe/tahoe-lafs-i2p/bin:${PATH}"
 
@@ -133,8 +133,8 @@ export LG2=en
 
 export TERM=screen-256color
 #export TERM=xterm
-fpath=(/home/jeff/.linuxbrew/share/zsh-completions $fpath)
-source /home/jeff/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#fpath=(/home/jeff/.linuxbrew/share/zsh-completions $fpath)
+#source /home/jeff/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #export PATH=$HOME/.linuxbrew/Cellar/iojs/2.3.4/bin:$PATH
 
 function brew () {
@@ -152,7 +152,10 @@ function brew () {
 	$HOME/.linuxbrew/bin/brew $@
 }
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH=$HOME/local/archlinux/bin:$PATH
 export PATH=$HOME/bin:$PATH
-
+export EDITOR=nano
+export MANPATH=/usr/local/news/share/man:$MANPATH
+unset http_proxy
+unset https_proxy
