@@ -102,8 +102,9 @@
  ;; If there is more than one, they won't work right.
  )
 
-(global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
-(global-set-key (kbd "S-C-<right>") 'enlarge-window-horizontally)
+
+(global-set-key (kbd "S-C-<right>") 'shrink-window-horizontally)
+(global-set-key (kbd "S-C-<left>") 'enlarge-window-horizontally)
 (global-set-key (kbd "S-C-<down>") 'shrink-window)
 (global-set-key (kbd "S-C-<up>") 'enlarge-window)
 
