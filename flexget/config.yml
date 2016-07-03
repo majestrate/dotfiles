@@ -138,12 +138,6 @@ templates:
 
 tasks:
 
-  akagami:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Shirayuki
-    template:
-      - defaults
-      - horrible
-
 
   orange:
     rss: http://www.nyaa.se/?page=rss&cats=1_37&term=orange
@@ -151,20 +145,8 @@ tasks:
       - defaults
       - horrible
       
-  Kouhosei:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=kouhosei
-    template:
-      - defaults
-      - gg
-
   asterisk:
     rss: http://www.nyaa.se/?page=rss&cats=1_37&term=asterisk
-    template:
-      - defaults
-      - horrible
-
-  seisen:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=seisen
     template:
       - defaults
       - horrible
@@ -180,14 +162,6 @@ tasks:
     template:
       - defaults
       - horrible
-
-
-  hundred:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=hundred
-    template:
-      - defaults
-      - horrible
-
       
   dragonball:
     rss: http://www.nyaa.se/?page=rss&cats=1_37&term=dragon+ball
@@ -222,7 +196,7 @@ tasks:
   gate-manga:
     rss: http://www.nyaa.se/?page=rss&cats=2_12&term=gate+jsdf
     template:
-      - default
+      - defaults
     accept_all: yes
     
   titan-manga:
@@ -230,34 +204,3 @@ tasks:
     template:
       - defaults
       - horrible-manga
-    
-#  Psytrance-kat:
-#    rss: http://kat.cr/usearch/psytrance/?rss=1&categoires[]=music
-#    template:
-#      - music
-#    accept_all: yes
-
-#  x-files:
-#    rss: http://kat.cr/usearch/x%20files%20category%3Atv/?rss=1
-#    template:
-#      - ettv 
-#      - defaults
-
-#  real-time:
-#    rss: http://kat.cr/usearch/real%20time%20category%3Atv/?rss=1
-#    template: 
-#      - defaults
-#      - vtv
-
-#  last-week-tonight:
-#    rss: http://kat.cr/usearch/Last%20Week%20Tonight/?rss=1
-#    template:
-#      - defaults
-#      - vtv
-
-#  weeklywipe:
-#    rss: http://kat.cr/usearch/weekly%20wipe/?rss=1
-#    template:
-#      - defaults
-#      - eztv
-
