@@ -144,11 +144,50 @@ tasks:
       - defaults
       - horrible
 
+
+  orange:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=orange
+    template:
+      - defaults
+      - horrible
+      
   Kouhosei:
     rss: http://www.nyaa.se/?page=rss&cats=1_37&term=kouhosei
     template:
       - defaults
+      - gg
+
+  asterisk:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=asterisk
+    template:
+      - defaults
       - horrible
+
+  seisen:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=seisen
+    template:
+      - defaults
+      - horrible
+
+  sousei:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=sousei
+    template:
+      - defaults
+      - horrible
+
+  rezero:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=re+zero+kara
+    template:
+      - defaults
+      - horrible
+
+
+  hundred:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=hundred
+    template:
+      - defaults
+      - horrible
+
       
   dragonball:
     rss: http://www.nyaa.se/?page=rss&cats=1_37&term=dragon+ball
@@ -156,39 +195,23 @@ tasks:
       - defaults
       - deadfish
 
-  endride:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=endride
+  Kuromukuro:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=kuromukuro
     template:
       - defaults
-      - horrible
-      
+      - gg
+
   taimadou:
     rss: http://www.nyaa.se/?page=rss&cats=1_37&term=taimadou
     template:
       - defaults
       - horrible
-      
-  snk:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=shingeki+no+kyojin
-    template:
-      - defaults
-      - horrible
-  gundam-iron:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=gundam+iron
-    template:
-      - defaults
-      - horrible
-  ass-class:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Assassination
-    template:
-      - defaults
-      - horrible
 
-  macross-dlt:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=macross+delta
+  kiznaiever:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=kiznaiver
     template:
       - defaults
-      - gg
+      - horrible
 
   new-gate-manga:
     rss: http://www.nyaa.se/?page=rss&cats=2_12&term=new+gate
@@ -208,17 +231,17 @@ tasks:
       - defaults
       - horrible-manga
     
-  Psytrance-kat:
-    rss: http://kat.cr/usearch/psytrance/?rss=1&categoires[]=music
-    template:
-      - music
-    accept_all: yes
+#  Psytrance-kat:
+#    rss: http://kat.cr/usearch/psytrance/?rss=1&categoires[]=music
+#    template:
+#      - music
+#    accept_all: yes
 
-  x-files:
-    rss: http://kat.cr/usearch/x%20files%20category%3Atv/?rss=1
-    template:
-      - ettv 
-      - defaults
+#  x-files:
+#    rss: http://kat.cr/usearch/x%20files%20category%3Atv/?rss=1
+#    template:
+#      - ettv 
+#      - defaults
 
 #  real-time:
 #    rss: http://kat.cr/usearch/real%20time%20category%3Atv/?rss=1
