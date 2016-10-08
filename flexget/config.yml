@@ -158,7 +158,7 @@ tasks:
   izetta:
     rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Shuumatsu+no+Izetta
     template:
-      - default
+      - defaults
       - horrible
     
   sousei:
