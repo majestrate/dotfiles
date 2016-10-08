@@ -3,10 +3,6 @@
 templates:
 
   defaults:
-    proxy: 
-      http: http://10.0.3.33:8888/
-      https: http://10.0.3.33:8888/
-
     transmission:
       host: 10.0.3.33
       port: 9091
@@ -65,6 +61,15 @@ templates:
       accept:
         - ^\[Commie\]    
 
+  bakedfish:
+    regexp:
+      accept:
+        - ^\[BakedFish\]
+      reject:
+        - \[400p\]
+        - \[480p\]
+        - \[1080p\]
+        - \[360p\]
   deadfish:
     regexp:
       accept:
@@ -138,9 +143,8 @@ templates:
 
 tasks:
 
-
-  orange:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=orange
+  qcode:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=qualidea+code
     template:
       - defaults
       - horrible
@@ -151,18 +155,36 @@ tasks:
       - defaults
       - horrible
 
+  izetta:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Shuumatsu+no+Izetta
+    template:
+      - default
+      - horrible
+    
   sousei:
     rss: http://www.nyaa.se/?page=rss&cats=1_37&term=sousei
     template:
       - defaults
       - horrible
 
-  rezero:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=re+zero+kara
+  berserk:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=berserk
     template:
       - defaults
       - horrible
-      
+    
+  gundam-iron:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Iron-Blooded
+    template:
+      - defaults
+      - horrible
+
+  Keikaku:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Keikaku
+    template:
+      - defaults
+      - horrible
+    
   dragonball:
     rss: http://www.nyaa.se/?page=rss&cats=1_37&term=dragon+ball
     template:
@@ -175,14 +197,14 @@ tasks:
       - defaults
       - gg
 
-  taimadou:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=taimadou
+  Kuromukuro:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=brave+witches
     template:
       - defaults
       - horrible
 
-  kiznaiever:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=kiznaiver
+  taimadou:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=taimadou
     template:
       - defaults
       - horrible
