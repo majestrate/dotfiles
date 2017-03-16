@@ -197,6 +197,24 @@ tasks:
       - defaults
       - gg
 
+  matoi:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=matoi
+    template:
+      - defaults
+      - horrible
+      
+  bloodivores:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=bloodivores
+    template:
+      - defaults
+      - horrible
+
+  keijo:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=keijo
+    template:
+      - defaults
+      - horrible
+
   Kuromukuro:
     rss: http://www.nyaa.se/?page=rss&cats=1_37&term=brave+witches
     template:
