@@ -4,26 +4,11 @@ templates:
 
   defaults:
     transmission:
-      host: 10.0.3.33
-      port: 9091
+      host: 10.0.3.200
+      port: 80
       path: /mnt/storage/contents/downloads
       ratio: 10
 
-  music:
-    proxy: 
-      http: http://10.0.3.33:8888/
-      https: http://10.0.3.33:8888/
-
-    transmission:
-      host: 10.0.3.33
-      port: 9091
-      path: /mnt/storage/contents/music
-      ratio: 1
-
-    regexp:
-      reject: 
-        - mp4
-        - flac
 
   aviguy:
     if: 
@@ -143,12 +128,6 @@ templates:
 
 tasks:
 
-  qcode:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=qualidea+code
-    template:
-      - defaults
-      - horrible
-      
   asterisk:
     rss: http://www.nyaa.se/?page=rss&cats=1_37&term=asterisk
     template:
@@ -184,33 +163,9 @@ tasks:
     template:
       - defaults
       - horrible
-    
-  dragonball:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=dragon+ball
-    template:
-      - defaults
-      - deadfish
 
-  Kuromukuro:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=kuromukuro
-    template:
-      - defaults
-      - gg
-
-  matoi:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=matoi
-    template:
-      - defaults
-      - horrible
-      
   bloodivores:
     rss: http://www.nyaa.se/?page=rss&cats=1_37&term=bloodivores
-    template:
-      - defaults
-      - horrible
-
-  keijo:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=keijo
     template:
       - defaults
       - horrible
@@ -223,6 +178,18 @@ tasks:
 
   taimadou:
     rss: http://www.nyaa.se/?page=rss&cats=1_37&term=taimadou
+    template:
+      - defaults
+      - horrible
+
+  sekai-ni:
+    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Sekai+ni
+    template:
+      - defaults
+      - horrible
+
+  ao-no-exorcist:
+    rss: http://www.nyaa.se/?page=rss&cats=1_47&term=ao+no+exorcist
     template:
       - defaults
       - horrible
