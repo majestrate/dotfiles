@@ -9,13 +9,12 @@ templates:
       path: /mnt/storage/contents/downloads
       ratio: 10
 
-
   aviguy:
-    if: 
+    if:
       - "'AVIGUY' in author": accept
 
   loadstone:
-    if: 
+    if:
       - "'loadstone' in author": accept
 
   trymes:
@@ -32,10 +31,10 @@ templates:
   ettv:
     if:
       - "'ettv' in author": accept
-        
+
   vtv:
     if:
-      - "'VTV' in author" : accept 
+      - "'VTV' in author" : accept
 
   bozx:
     if:
@@ -44,7 +43,7 @@ templates:
   commie:
     regexp:
       accept:
-        - ^\[Commie\]    
+        - ^\[Commie\]
 
   bakedfish:
     regexp:
@@ -92,7 +91,7 @@ templates:
       accept:
         - ^\[Chihiro\]
       reject:
-        - \.mp4  
+        - \.mp4
         - \[480p\]
   chyuu:
     regexp:
@@ -115,7 +114,7 @@ templates:
     regexp:
       accept:
         - ^\[HorribleScans\]
-        
+
   horrible:
     regexp:
       accept:
@@ -126,8 +125,20 @@ templates:
         - \[1080p\]
         - \[360p\]
 
+
+
 tasks:
 
+  00_i2pmirror:
+    from_transmission:
+      host: 10.0.3.200
+      port: 80
+      onlycomplete: yes
+    template:
+      - horrible
+    exec:
+      on_output:
+        for_accepted: /home/jeff/git/dotfiles/flexget/anodex.sh '{{transmission_downloadDir}}/{{title}}' '{{title}}' '{{url}}'
   asterisk:
     rss: http://www.nyaa.se/?page=rss&cats=1_37&term=asterisk
     template:
@@ -139,7 +150,7 @@ tasks:
     template:
       - defaults
       - horrible
-    
+
   sousei:
     rss: http://www.nyaa.se/?page=rss&cats=1_37&term=sousei
     template:
@@ -151,7 +162,7 @@ tasks:
     template:
       - defaults
       - horrible
-    
+
   gundam-iron:
     rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Iron-Blooded
     template:
@@ -205,7 +216,7 @@ tasks:
     template:
       - defaults
     accept_all: yes
-    
+
   titan-manga:
     rss: http://www.nyaa.se/?page=rss&cats=2_12&term=attack+on
     template:
