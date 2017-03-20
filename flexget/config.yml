@@ -133,7 +133,7 @@ tasks:
     from_transmission:
       host: 10.0.3.200
       port: 80
-      onlycomplete: yes
+      onlycomplete: no
     template:
       - horrible
     exec:

@@ -1,0 +1,25 @@
+
+templates:
+
+  horrible:
+    regexp:
+      accept:
+        - ^\[HorribleSubs\]
+      reject:
+        - \[400p\]
+        - \[480p\]
+        - \[1080p\]
+        - \[360p\]
+
+
+tasks:
+  00_i2pmirror:
+    from_transmission:
+      host: 10.0.3.200
+      port: 80
+      onlycomplete: no
+    template:
+      - horrible
+    exec:
+      on_output:
+        for_accepted: /home/jeff/git/dotfiles/flexget/anodex.sh '{{transmission_downloadDir}}/{{title}}' '{{title}}' '{{url}}'
