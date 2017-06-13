@@ -1,0 +1,19 @@
+
+set imap_user = "ampernand@gmail.com"
+set imap_keepalive = 30
+unset imap_passive
+set folder = "imaps://imap.gmail.com"
+set spoolfile = "+[Gmail]/All Mail"
+set postponed = "+[Gmail]/Drafts"
+set header_cache = ~/.mutt/jeff/headers
+set message_cachedir = ~/.mutt/jeff/bodies
+set certificate_file = ~/.mutt/certificates
+set from = "ampernand@gmail.com"
+set realname = "jeff"
+set smtp_url = "smtps://ampernand@gmail.com@smtp.gmail.com:465/"
+set record = ""
+set move = no
+
+source "gpg -d ~/.mutt/passwords.txt.gpg |"
+
+auto_view text/html;
