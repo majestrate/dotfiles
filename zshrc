@@ -1,161 +1,128 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/local/oh-my-zsh
 
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="muse-desu"
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="ayyy"
-
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Set to this to use case-sensitive completion
+# Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Uncomment this to disable bi-weekly auto-update checks
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
-# Uncomment to change how often before auto-updates occur? (in days)
+# Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
 
-# Uncomment following line if you want to disable colors in ls
+# Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
 
-# Uncomment following line if you want to disable autosetting terminal title.
+# Uncomment the following line to disable auto-setting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
-# Uncomment following line if you want to disable command autocorrection
-# DISABLE_CORRECTION="true"
+# Uncomment the following line to enable command auto-correction.
+ENABLE_CORRECTION="true"
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+# Uncomment the following line to display red dots whilst waiting for completion.
+COMPLETION_WAITING_DOTS="true"
 
-# Uncomment following line if you want to disable marking untracked files under
-# VCS as dirty. This makes repository status check for large repositories much,
-# much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(python ubuntu brew git-custom rails-custom ruby)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git gradle ubuntu)
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-#export PATH=/home/jeff/.local/bin:/home/jeff/jython/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$PATH
-#export EDITOR=/usr/bin/zile
+# User configuration
 
-#alias nano=$EDITOR
+# export MANPATH="/usr/local/man:$MANPATH"
 
-# for jar in /usr/share/java/*.jar ; do
-# 	export JYTHONPATH="$JYTHONPATH:$jar"
-# done
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
 
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
 #
-for jar in $HOME/jars/*.jar ; do
-	export CLASSPATH="$CLASSPATH:$jar"
-done
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export JYTHONPATH="$CLASSPATH"
-#export CLASSPATH="$JYTHONPATH"
-
-export GEM_HOME=$HOME/.gem
-export PATH=/usr/local/cuda/bin:$GEM_HOME/bin:$PATH
-export PATH=$HOME/source/maven/bin:$PATH
-export MANPATH=$HOME/.local/share/man:/usr/share/man:/usr/local/share/man:/usr/man
-
-#source $HOME/.sysidk/sysidk.rc
-#alias vi=$HOME/local/bin/vim
-#alias emacs=$HOME/local/bin/emacs
-
-#export PATH=$HOME/source/depot_tools:$PATH
-export PATH=$HOME/i2p:$PATH
-
-
-export GOPATH=$HOME/git/go
+export GOPATH=$HOME/go
 export GOROOT=$HOME/local/go/root
-export GOOS=linux
-export GOARCH=amd64
 export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
+export GEM_HOME=$HOME/local/gems
+export PATH=$GEM_HOME/bin:$PATH
 
-export PATH=$HOME/scala/bin:$PATH
+export MY_RUBY=$HOME/local/ruby/2.3.1
+export PATH=$MY_RUBY/bin:$PATH
 
-export TOOLCHAIN=$HOME/src/armtoolchain/toolchain
-
-eval `dircolors $HOME/.dir_colors/default`
-export STUDIO_JDK=/opt/jdk
-eval `lesspipe`
-readme() {
-	case "$1" in 
-	*.md)
-		markdown $1 | w3m -T text/html
-		;;
-	*.rst)
-		rst2html $1 | w3m -T text/html
-	esac
-}
-
-#export PYENV_ROOT=$HOME/.pyenv
-#export PATH=$PYENV_ROOT/bin:$PATH
-#eval "$(pyenv init -)"
-
-#export RPI_PREFIX=$HOME/source/rpi/prefix
-#export PATH=$HOME/.shadow/bin:$HOME/source/rpi/toolchain/bin:$PATH
-export PATH=$HOME/source/rpi-tools/arm-bcm2708/gcc-linaro-arm-linux-gnueabihf-raspbian-x64/bin:$PATH
-#export AWS_CREDENTIAL_FILE=$HOME/aws/credentials.csv
-
-export PATH=$HOME/source/nacl_sdk:$PATH
-
-#export http_proxy=http://10.0.3.1:8118/
-#export https_proxy=http://10.0.3.1:8118/
-
-#export PATH=$HOME/local/bin:$PATH
-
-export PATH="/home/jeff/tahoe/tahoe-lafs-i2p/bin:${PATH}"
-
-export PATH=$HOME/.shadown/bin:$PATH
-
-export USE_HOMEBREW='no'
-
-# monotone
-export LG2=en
-
-#function zle-line-init () { echoti smkx }
-#function zle-line-finish () { echoti rmkx }
-#zle -N zle-line-init
-#zle -N zle-line-finish
-
-export TERM=screen-256color
-#export TERM=xterm
-#fpath=(/home/jeff/.linuxbrew/share/zsh-completions $fpath)
-#source /home/jeff/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#export PATH=$HOME/.linuxbrew/Cellar/iojs/2.3.4/bin:$PATH
-
-function brew () {
-	if [ "x$USE_HOMEBREW" != "xyes" ] ; then
-		export HELPDIR=/home/jeff/.linuxbrew/share/zsh/help
-		export PATH="$HOME/.linuxbrew/bin:$HOME/.linuxbrew/sbin:$PATH"
-		export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
-		export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
-		export HOMEBREW_EDITOR=nano
-		export USE_HOMEBREW="yes"
-    export GOROOT=$HOME/.linuxbrew/opt/go/libexec
-		export PATH=$GOROOT/bin:$PATH
-		echo "brew now enabled"
-	fi
-	$HOME/.linuxbrew/bin/brew $@
-}
-
-#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH=$HOME/local/archlinux/bin:$PATH
-export PATH=$HOME/bin:$PATH
 export EDITOR=nano
-export MANPATH=/usr/local/news/share/man:$MANPATH
-unset http_proxy
-unset https_proxy
+export NNTPSERVER=127.0.0.1:1191
+export PATH=$HOME/.cargo/bin:$PATH
+
+export TERMINAL=wterm
+export TERM=xterm-256color
+
+export PYENV_ROOT=$HOME/local/pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+
+export RPI=$HOME/local/rpi
+export PATH=$RPI/tools/arm-bcm2708/arm-bcm2708hardfp-linux-gnueabi/bin:$PATH
+. /home/jeff/.nix-profile/etc/profile.d/nix.sh
+
+export PATH=$HOME/local/wine/bin:$PATH
+export JAVA_HOME=/opt/jdk
+export PATH=$JAVA_HOME/bin:$PATH
+
+eval "$(lesspipe)"
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/jeff/.sdkman"
+[[ -s "/home/jeff/.sdkman/bin/sdkman-init.sh" ]] && source "/home/jeff/.sdkman/bin/sdkman-init.sh"
+
+export PATH=$HOME/local/miniconda/bin:$PATH
+
+export PATH=$HOME/bin:$PATH

@@ -1,0 +1,19 @@
+[user]
+	email = jeff@i2p.rocks
+	name = Jeff Becker
+	signingkey = F357B3B42F6F9B05
+[color]
+	ui = auto
+[push]
+	default = simple
+
+[zeronet]
+	home = /home/jeff/git/ZeroNet
+[commit]
+	gpgsign = true
+[http "http://git.psi.i2p/"]
+	proxy = http://127.0.0.1:4444
+
+[http "http://yklo4bsbwi66r2wlbug5jrkpx6tlquo34knzaopsboiz5dnxn5rq.b32.i2p/"]
+	proxy = http://127.0.0.1:4444
+
