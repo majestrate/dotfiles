@@ -98,8 +98,12 @@ export EDITOR=nano
 export NNTPSERVER=127.0.0.1:1191
 export PATH=$HOME/.cargo/bin:$PATH
 
-export TERMINAL=wterm
+export TERMINAL=xterm
+if [[ "x$TMUX" == "x" ]] ; then
 export TERM=xterm-256color
+else
+export TERM=screen-256color
+fi
 
 export PYENV_ROOT=$HOME/local/pyenv
 export PATH=$PYENV_ROOT/bin:$PATH

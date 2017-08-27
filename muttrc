@@ -1,18 +1,23 @@
-set imap_user = "jeff@i2p.rocks"
-set imap_keepalive = 30
-unset imap_passive
-set folder = "imaps://mail6.i2p.rocks/"
-set spoolfile = +INBOX
-mailboxes = +INBOX
-set header_cache = ~/.mutt/jeff@i2p.rocks/headers
-set message_cachedir = ~/.mutt/jeff@i2p.rocks/bodies
-set certificate_file = ~/.mutt/certificates
+set mbox_type = mbox
+set spoolfile = /media/mail/jeff@i2p.rocks/mail.spool
+set folder = /media/mail/jeff@i2p.rocks/mail
+mailboxes +INBOX
+set header_cache = /media/mail/jeff@i2p.rocks/headers
+set message_cachedir = /media/mail/jeff@i2p.rocks/bodies
+set mbox = /media/mail/jeff@i2p.rocks/mail-storage
+set certificate_file = /media/mail/jeff@i2p.rocks/certificates
 set from = "jeff@i2p.rocks"
 set realname = "jeff"
 set smtp_url = "smtps://jeff@i2p.rocks@mail6.i2p.rocks/"
 set record = ""
 set move = no
+set pop_delete = yes
+set pop_host = "mail6.i2p.rocks"
+set pop_user = "jeff@i2p.rocks"
+set pop_reconnect = yes
+set pop_checkinterval = 1
+set postponed = /media/mail/jeff@i2p.rocks/postponed
 
-source "gpg -d ~/.mutt/passwords.txt.gpg |"
+source "gpg -d /media/mail/passwords.txt.gpg |"
 
 auto_view text/html;
