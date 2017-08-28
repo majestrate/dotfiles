@@ -128,97 +128,78 @@ templates:
 
 
 tasks:
-
-  00_i2pmirror:
-    from_transmission:
-      host: 10.0.3.200
-      port: 80
-      onlycomplete: no
-    template:
-      - horrible
-    exec:
-      on_output:
-        for_accepted: /home/jeff/git/dotfiles/flexget/anodex.sh '{{transmission_downloadDir}}/{{title}}' '{{title}}' '{{url}}'
-  asterisk:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=asterisk
+  animes:
+    rss: https://nyaa.si/?page=rss&u=HorribleSubs
     template:
       - defaults
       - horrible
-
-  izetta:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Shuumatsu+no+Izetta
+        
+  fate:
+    rss: https://nyaa.si/?page=rss&u=Unlimited+Translation+Works
     template:
       - defaults
-      - horrible
+    regexp:
+      accept:
+        - Apocrypha
 
-  sousei:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=sousei
-    template:
-      - defaults
-      - horrible
+  #shitemasuka:
+  #  rss: http://www.nyaa.se/?page=rss&cats=1_37&term=shitemasu+ka
+  #  template:
+  #    - defaults
+  #    - horrible
 
-  berserk:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=berserk
-    template:
-      - defaults
-      - horrible
+  #titan:
+  #  rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Shingeki+no+Kyojin
+  #  template:
+  #    - defaults
+  #    - horrible
 
-  gundam-iron:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Iron-Blooded
-    template:
-      - defaults
-      - horrible
+  #sekaisuru:
+  #  rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Seikaisuru+Kado
+  #  template:
+  #    - defaults
+  #    - horrible
 
-  Keikaku:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Keikaku
-    template:
-      - defaults
-      - horrible
+  #clockwork:
+  #  rss: http://www.nyaa.se/?page=rss&cats=1_37&term=clockwork
+  #  template:
+  #    - defaults
+  #    - horrible
 
-  bloodivores:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=bloodivores
-    template:
-      - defaults
-      - horrible
+  #Rokudenashi:
+  #  rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Rokudenashi
+  #  template:
+  #    - defaults
+  #    - horrible
 
-  Kuromukuro:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=brave+witches
-    template:
-      - defaults
-      - horrible
+  #zero-kara:
+  #  rss: http://www.nyaa.se/?page=rss&cats=1_37&term=hajimeru+no+sho
+  #  template:
+  #    - defaults
+  #    - horrible
 
-  taimadou:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=taimadou
-    template:
-      - defaults
-      - horrible
+  #asterisk:
+  #  rss: http://www.nyaa.se/?page=rss&cats=1_37&term=asterisk
+  #  template:
+  #    - defaults
+  #    - horrible
 
-  sekai-ni:
-    rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Sekai+ni
-    template:
-      - defaults
-      - horrible
+  #SwordOratoria:
+  #  rss: http://www.nyaa.se/?page=rss&cats=1_37&term=sword+oratoria
+  #  template:
+  #    - defaults
+  #    - horrible
 
-  ao-no-exorcist:
-    rss: http://www.nyaa.se/?page=rss&cats=1_47&term=ao+no+exorcist
-    template:
-      - defaults
-      - horrible
 
-  new-gate-manga:
-    rss: http://www.nyaa.se/?page=rss&cats=2_12&term=new+gate
-    template:
-      - defaults
-    accept_all: yes
+  #berserk:
+  #  rss: http://www.nyaa.se/?page=rss&cats=1_37&term=berserk
+  #  template:
+  #    - defaults
+  #    - horrible
 
-  gate-manga:
-    rss: http://www.nyaa.se/?page=rss&cats=2_12&term=gate+jsdf
-    template:
-      - defaults
-    accept_all: yes
+  #Keikaku:
+  #  rss: http://www.nyaa.se/?page=rss&cats=1_37&term=Keikaku
+  #  template:
+  #    - defaults
+  #    - horrible
 
-  titan-manga:
-    rss: http://www.nyaa.se/?page=rss&cats=2_12&term=attack+on
-    template:
-      - defaults
-      - horrible-manga
