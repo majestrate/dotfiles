@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 root (
-                     201708221           ; Serial
+                     20170828           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                         86400           ; Expire  [1d]
@@ -21,5 +21,7 @@ _xmpp-client._tcp	IN	SRV	0 5 5222 i2p.rocks.
 _matrix._tcp	IN	SRV	10 5 443 i2p.rocks.
 mail6	IN	AAAA	fcf9:32f:2604:3ede:8fae:67ee:78be:c376
 @	IN	A	162.243.164.223
+@	IN	AAAA	2604:a880:400:d0::6d7:b001
 @	IN	TXT	( "v=spf1 a:109.68.10.185.box.cock.li a:mail.i2p.rocks -all" )
 *	IN	A	162.243.164.223
+*	IN	AAAA	2604:a880:400:d0::6d7:b001
