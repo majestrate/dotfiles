@@ -1,6 +1,17 @@
 
 
 templates:
+
+  youtube:
+    accept_all: yes
+    exec:
+      on_output:
+        for_accepted: youtube-dl "{{url}}"
+    notify:
+      task:
+        via:
+          - toast: yes
+
   defaults:
     notify:
       task:
@@ -130,6 +141,14 @@ templates:
 
 
 
+schedules:
+  - tasks: 'animes-*'
+    interval:
+      hours: 1
+  - tasks: 'youtube-*'
+    interval:
+      minutes: 10
+
 
 tasks:
 
@@ -146,9 +165,3 @@ tasks:
     regexp:
       accept:
         - Apocrypha
-
-
-schedules:
-  - tasks: 'animes-*'
-    interval:
-      hours: 1
