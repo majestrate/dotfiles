@@ -8,7 +8,6 @@
 (global-unset-key "\M-w")
 (global-set-key "\C-e" 'kill)
 
-(menu-bar-mode 0)
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
@@ -16,7 +15,7 @@
 (package-initialize)
 (column-number-mode)
 (desktop-save-mode)
-;;(setq-default c-default-style "linux")
+(setq-default c-default-style "linux")
 (setq-default c-basic-offset 2)
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
@@ -24,9 +23,8 @@
 (setq-default js-indent-level 2)
 
 ;;(require 'go-autocomplete)
-(require 'go-autocomplete)
-(require 'auto-complete-config)
-(define-key ac-mode-map [(backtab)] 'auto-complete)
+;;(require 'auto-complete-config)
+;; (define-key ac-mode-map [(backtab)] 'auto-complete)
 
 ;;(define-key read-expression-map [(tab)] 'hippie-expand)
 ;;(global-set-key (kbd "TAB") 'fancy-tab)
@@ -51,7 +49,7 @@
 ;;(add-hook 'c++-mode-hook 'column-highlight-mode)
 ;;(add-hook 'c++-mode-hook 'column-enforce-mode)
 ;;(require 'minimap)
-;;(whitespace-mode)
+(whitespace-mode)
 
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.css'" . web-mode))
@@ -68,8 +66,8 @@
      nil 'fullscreen
      (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
 
-(add-to-list 'default-frame-alist
-             '(font . "Inconsolata-12:width=condensed:weight=light"))
+;;(add-to-list 'default-frame-alist
+;;             '(font . "Inconsolata-12:width=condensed:weight=light"))
 (global-set-key [f11] 'toggle-fullscreen)
 (toggle-fullscreen)
 
@@ -80,7 +78,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- ;;'(ac-expand-on-auto-complete nil)
  '(c-indent-comment-alist
    (quote
     ((anchored-comment column . 0)
@@ -94,25 +91,30 @@
  '(global-auto-complete-mode t)
  '(indent-tabs-mode nil)
  '(jdee-server-dir "/home/jeff/git/jdee-server/jdee-server/")
- '(js-indent-level 2 t))
+ '(js-indent-level 2 t)
+ '(package-selected-packages
+   (quote
+    (markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
+ '(safe-local-variable-values
+   (quote
+    ((eval message "Project directory set to `%s'." my-project-path)
+     (eval setenv "GOPATH" my-project-path)
+     (eval set
+           (make-local-variable
+            (quote my-project-path))
+           (file-name-directory
+            (let
+                ((d
+                  (dir-locals-find-file ".")))
+              (if
+                  (stringp d)
+                  d
+                (car d)))))))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-
-(global-set-key (kbd "S-C-<right>") 'shrink-window-horizontally)
-(global-set-key (kbd "S-C-<left>") 'enlarge-window-horizontally)
-(global-set-key (kbd "S-C-<down>") 'shrink-window)
-(global-set-key (kbd "S-C-<up>") 'enlarge-window)
-
-(global-set-key (kbd "s-<up>") 'windmove-up)
-(global-set-key (kbd "s-<down>") 'windmove-down)
-(global-set-key (kbd "s-<right>") 'windmove-right)
-(global-set-key (kbd "s-<left>") 'windmove-left)
-
-(load-theme 'jeff)
 
 (require 'jdee)
