@@ -71,6 +71,7 @@
 (global-set-key [f11] 'toggle-fullscreen)
 (toggle-fullscreen)
 
+(add-hook 'before-save-hook 'gofmt-before-save)
 
 (global-set-key [f10] 'minimap-toggle)
 (custom-set-variables
@@ -91,10 +92,10 @@
  '(global-auto-complete-mode t)
  '(indent-tabs-mode nil)
  '(jdee-server-dir "/home/jeff/git/jdee-server/jdee-server/")
- '(js-indent-level 2 t)
+ '(js-indent-level 2)
  '(package-selected-packages
    (quote
-    (markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
+    (go-autocomplete govet markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
  '(safe-local-variable-values
    (quote
     ((eval message "Project directory set to `%s'." my-project-path)

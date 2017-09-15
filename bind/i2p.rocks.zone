@@ -12,16 +12,17 @@ $TTL    3600
 
 201708._domainkey       IN      TXT     ( "v=DKIM1; h=sha256; k=rsa; s=email; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDNVOqb8e8Xgjx+ue3p6uDLDJKF2D60x7GkE2suZ8Xu3KF4gMUup8w/yUdZDojXHNe1AxVt8JczUDxIJimf6hEry6vWqkO5EB7sg/u7i3Ljbwff6c8tJC88ReKJv4Hh3tbgf2HDlQ+XohAZgoLEwOAz2iHjzQISNy/V8LWSmeoCXQIDAQAB" )
 *._domainkey       IN      TXT     ( "v=DKIM1; h=sha256; k=rsa; s=email; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDNVOqb8e8Xgjx+ue3p6uDLDJKF2D60x7GkE2suZ8Xu3KF4gMUup8w/yUdZDojXHNe1AxVt8JczUDxIJimf6hEry6vWqkO5EB7sg/u7i3Ljbwff6c8tJC88ReKJv4Hh3tbgf2HDlQ+XohAZgoLEwOAz2iHjzQISNy/V8LWSmeoCXQIDAQAB" )
-mail	IN	TXT	( "v=spf1 mx a:109.68.10.185.box.cock.li a:mail.i2p.rocks -all" )
+mail	IN	TXT	( "v=spf1 mx a:mail.i2p.rocks -all" )
 ns1	IN	A	185.10.68.109	
 ns2	IN	A	185.10.68.109	
 mail	IN	A	185.10.68.109
 _xmpp-server._tcp	IN	SRV	0 5 5269 i2p.rocks.
 _xmpp-client._tcp	IN	SRV	0 5 5222 i2p.rocks.
 _matrix._tcp	IN	SRV	10 5 443 i2p.rocks.
+_onion-mx._tcp	IN	SRV	0 5 25 psii2pdloxelodts.onion.
 mail6	IN	AAAA	fcf9:32f:2604:3ede:8fae:67ee:78be:c376
 @	IN	A	162.243.164.223
 @	IN	AAAA	2604:a880:400:d0::6d7:b001
-@	IN	TXT	( "v=spf1 a:109.68.10.185.box.cock.li a:mail.i2p.rocks -all" )
+@	IN	TXT	( "v=spf1 a:mail.i2p.rocks -all" )
 *	IN	A	162.243.164.223
 *	IN	AAAA	2604:a880:400:d0::6d7:b001
