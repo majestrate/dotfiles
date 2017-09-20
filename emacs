@@ -92,10 +92,10 @@
  '(global-auto-complete-mode t)
  '(indent-tabs-mode nil)
  '(jdee-server-dir "/home/jeff/git/jdee-server/jdee-server/")
- '(js-indent-level 2)
+ '(js-indent-level 2 t)
  '(package-selected-packages
    (quote
-    (go-autocomplete govet markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
+    (yaml-mode go-autocomplete govet markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
  '(safe-local-variable-values
    (quote
     ((eval message "Project directory set to `%s'." my-project-path)
