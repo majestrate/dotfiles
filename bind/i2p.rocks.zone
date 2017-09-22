@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 root (
-                     201709202           ; Serial
+                     201709223           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                         86400           ; Expire  [1d]
@@ -14,7 +14,7 @@ $TTL    3600
 *._domainkey       IN      TXT     ( "v=DKIM1; h=sha256; k=rsa; s=email; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDNVOqb8e8Xgjx+ue3p6uDLDJKF2D60x7GkE2suZ8Xu3KF4gMUup8w/yUdZDojXHNe1AxVt8JczUDxIJimf6hEry6vWqkO5EB7sg/u7i3Ljbwff6c8tJC88ReKJv4Hh3tbgf2HDlQ+XohAZgoLEwOAz2iHjzQISNy/V8LWSmeoCXQIDAQAB" )
 mail	IN	TXT	( "v=spf1 mx a:mail.i2p.rocks -all" )
 ns1	IN	A	185.10.68.109	
-ns2	IN	A	185.10.68.109	
+ns2	IN	A	162.243.164.223
 mail	IN	A	185.10.68.109
 _xmpp-server._tcp	IN	SRV	0 5 5269 i2p.rocks.
 _xmpp-client._tcp	IN	SRV	0 5 5222 i2p.rocks.
