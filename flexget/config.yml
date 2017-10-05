@@ -54,6 +54,7 @@ templates:
     if:
       - "'BOZX' in author" : accept
 
+  
   commie:
     regexp:
       accept:
@@ -145,13 +146,18 @@ schedules:
   - tasks: 'animes-*'
     interval:
       hours: 1
-  - tasks: 'youtube-*'
+  - tasks: 'tv'
     interval:
-      minutes: 10
-
+      hours: 1
 
 tasks:
 
+  tv:
+    rss: http://showrss.info/user/153353.rss?magnets=true&namespaces=false&name=clean&quality=hd&re=no
+    template:
+      - defaults
+    accept_all: yes
+  
   animes-horrible:
     rss: https://nyaa.si/?page=rss&u=HorribleSubs
     template:
