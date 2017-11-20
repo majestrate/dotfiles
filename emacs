@@ -66,8 +66,8 @@
      nil 'fullscreen
      (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
 
-;;(add-to-list 'default-frame-alist
-;;             '(font . "Inconsolata-12:width=condensed:weight=light"))
+(add-to-list 'default-frame-alist
+             '(font . "Inconsolata-10:width=condensed:weight=light"))
 (global-set-key [f11] 'toggle-fullscreen)
 (toggle-fullscreen)
 
@@ -92,10 +92,10 @@
  '(global-auto-complete-mode t)
  '(indent-tabs-mode nil)
  '(jdee-server-dir "/home/jeff/git/jdee-server/jdee-server/")
- '(js-indent-level 2 t)
+ '(js-indent-level 2)
  '(package-selected-packages
    (quote
-    (yaml-mode go-autocomplete govet markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
+    (cmake-mode clang-format haskell-mode alchemist elixir-mode yaml-mode go-autocomplete govet markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
  '(safe-local-variable-values
    (quote
     ((eval message "Project directory set to `%s'." my-project-path)
