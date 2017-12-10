@@ -51,7 +51,7 @@
 ;;(require 'minimap)
 (whitespace-mode)
 
-(require 'web-mode)
+;;(require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.css'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.php'" . web-mode))
@@ -92,13 +92,14 @@
  '(global-auto-complete-mode t)
  '(indent-tabs-mode nil)
  '(jdee-server-dir "/home/jeff/git/jdee-server/jdee-server/")
- '(js-indent-level 2)
+ '(js-indent-level 2 t)
  '(package-selected-packages
    (quote
-    (cmake-mode clang-format haskell-mode alchemist elixir-mode yaml-mode go-autocomplete govet markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
+    (company company-c-headers company-go molokai-theme systemd web-beautify web-completion-data cmake-mode clang-format haskell-mode alchemist elixir-mode yaml-mode go-autocomplete govet markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
  '(safe-local-variable-values
    (quote
-    ((eval message "Project directory set to `%s'." my-project-path)
+    ((encoding . utf-8)
+     (eval message "Project directory set to `%s'." my-project-path)
      (eval setenv "GOPATH" my-project-path)
      (eval set
            (make-local-variable
@@ -118,4 +119,4 @@
  ;; If there is more than one, they won't work right.
  )
 
-(require 'jdee)
+;;(require 'jdee)
