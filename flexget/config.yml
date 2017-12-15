@@ -13,14 +13,9 @@ templates:
           - toast: yes
 
   defaults:
-    notify:
-      task:
-        via:
-          - toast: yes
     transmission:
-      host: 10.0.3.200
+      host: 192.168.1.10
       port: 80
-      path: /mnt/storage/contents/downloads
       ratio: 10
 
   aviguy:
@@ -163,6 +158,14 @@ tasks:
     template:
       - defaults
       - horrible
+
+  anime-asenshi:
+    rss: https://nyaa.si/?page=rss&u=Asenshi
+    template:
+      - defaults
+    regexp:
+      accept:
+        - Kora
 
   animes-fate:
     rss: https://nyaa.si/?page=rss&u=Unlimited+Translation+Works

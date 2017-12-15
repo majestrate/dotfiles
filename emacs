@@ -67,11 +67,11 @@
      (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
 
 (add-to-list 'default-frame-alist
-             '(font . "Inconsolata-10:width=condensed:weight=light"))
+             '(font . "Inconsolata-18:width=condensed:weight=light"))
 (global-set-key [f11] 'toggle-fullscreen)
 (toggle-fullscreen)
 
-(add-hook 'before-save-hook 'gofmt-before-save)
+(add-hook 'before-save-hook #'gofmt-before-save)
 
 (global-set-key [f10] 'minimap-toggle)
 (custom-set-variables
@@ -95,7 +95,7 @@
  '(js-indent-level 2 t)
  '(package-selected-packages
    (quote
-    (company company-c-headers company-go molokai-theme systemd web-beautify web-completion-data cmake-mode clang-format haskell-mode alchemist elixir-mode yaml-mode go-autocomplete govet markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
+    (lua-mode company company-c-headers company-go molokai-theme systemd web-beautify web-completion-data cmake-mode clang-format haskell-mode alchemist elixir-mode yaml-mode go-autocomplete govet markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
  '(safe-local-variable-values
    (quote
     ((encoding . utf-8)
