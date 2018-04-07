@@ -15,7 +15,7 @@
 (package-initialize)
 (column-number-mode)
 (desktop-save-mode)
-(setq-default c-default-style "linux")
+(setq-default c-default-style "bsd")
 (setq-default c-basic-offset 2)
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
@@ -92,10 +92,10 @@
  '(global-auto-complete-mode t)
  '(indent-tabs-mode nil)
  '(jdee-server-dir "/home/jeff/git/jdee-server/jdee-server/")
- '(js-indent-level 2 t)
+ '(js-indent-level 2)
  '(package-selected-packages
    (quote
-    (lua-mode company company-c-headers company-go molokai-theme systemd web-beautify web-completion-data cmake-mode clang-format haskell-mode alchemist elixir-mode yaml-mode go-autocomplete govet markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
+    (typescript-mode company-web flatui-dark-theme mastodon column-enforce-mode kotlin-mode company-erlang erlang lua-mode company-c-headers company-go molokai-theme systemd web-beautify web-completion-data cmake-mode clang-format haskell-mode alchemist elixir-mode yaml-mode go-autocomplete govet markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
  '(safe-local-variable-values
    (quote
     ((encoding . utf-8)
@@ -120,3 +120,28 @@
  )
 
 ;;(require 'jdee)
+(require 'company)
+(require 'company-go)
+(add-hook 'after-init-hook 'global-company-mode)
+(setq company-begin-commands '(self-insert-command)) 
+
+;;(require 'cc-mode)
+;;(require 'semantic)
+
+;;(global-semanticdb-minor-mode 1)
+;;(global-semantic-idle-scheduler-mode 1)
+
+;;(semantic-mode 1)
+
+
+;; gs
+;;(add-to-list 'load-path "~/git/gnu-social-mode")
+;;(require 'gnu-social-mode)
+;;(setq gnu-social-server "social.i2p.rocks")
+
+(load-theme 'flatui-dark t)
+
+;;(require 'go-autocomplete)
+;;(require 'auto-complete-config)
+;;(ac-config-default)
+
