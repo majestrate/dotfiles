@@ -1,0 +1,12 @@
+
+* llarp high level design document                         :llarp:docs:loki:
+  CLOCK: [2018-05-14 Mon 09:30]--[2018-05-14 Mon 10:52] =>  1:22
+
+* i2pd test network bandwidth profiling :i2pd:loki:
+* i2pd loki network dirauth design                               :i2pd:loki:
+** i2pd loki network dirauth threat model :i2pd:java-i2p:loki:
+* network congestion metric for proof of work function :i2pd:java-i2p:loki:
+
+
+
+

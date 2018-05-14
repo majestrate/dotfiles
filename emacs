@@ -92,7 +92,7 @@
  '(global-auto-complete-mode t)
  '(indent-tabs-mode nil)
  '(jdee-server-dir "/home/jeff/git/jdee-server/jdee-server/")
- '(js-indent-level 2)
+ '(js-indent-level 2 t)
  '(package-selected-packages
    (quote
     (typescript-mode company-web flatui-dark-theme mastodon column-enforce-mode kotlin-mode company-erlang erlang lua-mode company-c-headers company-go molokai-theme systemd web-beautify web-completion-data cmake-mode clang-format haskell-mode alchemist elixir-mode yaml-mode go-autocomplete govet markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
