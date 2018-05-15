@@ -8,9 +8,10 @@
   
 
 * i2pd loki network dirauth design                               :i2pd:loki:
-** i2pd loki network dirauth threat model                    :i2pd:javai2p:loki:
-** i2pd peer bw or peer profile i2np message             :i2pd:loki:
-** lokid providing authortitative network concesous :i2pd:loki:
+** i2pd loki network dirauth threat model                     :i2pd:javai2p:loki:
+** i2pd peer bw or peer profile i2np message                          :i2pd:loki:
+*** i2pd i2np extension messages                              :i2pd:i2npext:loki:
+** lokid providing authortitative network concesous                   :i2pd:loki:
 
 * network congestion metric for proof of work function :i2pd:java-i2p:loki:
 
