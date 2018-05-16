@@ -11,6 +11,10 @@
 ** i2pd loki network dirauth threat model                     :i2pd:javai2p:loki:
 ** i2pd peer bw or peer profile i2np message                          :i2pd:loki:
 *** i2pd i2np extension messages                              :i2pd:i2npext:loki:
+    CLOCK: [2018-05-15 Tue 11:33]--[2018-05-15 Tue 14:34] =>  3:01
+    CLOCK: [2018-05-15 Tue 09:43]--[2018-05-15 Tue 10:23] =>  0:40
+    
+
 ** lokid providing authortitative network concesous                   :i2pd:loki:
 
 * network congestion metric for proof of work function :i2pd:java-i2p:loki:
