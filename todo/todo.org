@@ -7,18 +7,24 @@
   CLOCK: [2018-05-14 Mon 11:04]--[2018-05-14 Mon 12:08] =>  1:04
   
 
-* i2pd loki network dirauth design                               :i2pd:loki:
+* i2pd loki network dirauth design                                :i2pd:loki:
 ** i2pd loki network dirauth threat model                     :i2pd:javai2p:loki:
 ** i2pd peer bw or peer profile i2np message                          :i2pd:loki:
 *** i2pd i2np extension messages                              :i2pd:i2npext:loki:
     CLOCK: [2018-05-15 Tue 11:33]--[2018-05-15 Tue 14:34] =>  3:01
     CLOCK: [2018-05-15 Tue 09:43]--[2018-05-15 Tue 10:23] =>  0:40
     
-
+    
 ** lokid providing authortitative network concesous                   :i2pd:loki:
 
 * network congestion metric for proof of work function :i2pd:java-i2p:loki:
 
 
+* get llarp to do something
+  CLOCK: [2018-05-17 Thu 15:33]--[2018-05-17 Thu 16:04] =>  0:31
+  CLOCK: [2018-05-16 Wed 13:04]--[2018-05-16 Wed 14:18] =>  1:14
+
+  CLOCK: [2018-05-16 Wed 11:11]--[2018-05-16 Wed 12:55] =>  1:44
+  CLOCK: [2018-05-16 Wed 09:29]--[2018-05-16 Wed 10:48] =>  1:19
 
 
