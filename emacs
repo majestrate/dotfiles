@@ -98,7 +98,11 @@
     (typescript-mode company-web flatui-dark-theme mastodon column-enforce-mode kotlin-mode company-erlang erlang lua-mode company-c-headers company-go molokai-theme systemd web-beautify web-completion-data cmake-mode clang-format haskell-mode alchemist elixir-mode yaml-mode go-autocomplete govet markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
  '(safe-local-variable-values
    (quote
-    ((encoding . utf-8)
+    ((eval add-hook
+           (quote before-save-hook)
+           (function clang-format-buffer)
+           nil t)
+     (encoding . utf-8)
      (eval message "Project directory set to `%s'." my-project-path)
      (eval setenv "GOPATH" my-project-path)
      (eval set
