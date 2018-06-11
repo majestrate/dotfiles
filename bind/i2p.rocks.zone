@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 root (
-                     2018052000           ; Serial
+                     2018061100           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                         86400           ; Expire  [1d]
@@ -30,7 +30,7 @@ git IN A 185.10.68.109
 git IN AAAA 2a06:1700:0:b::44cb:6d
 statusnet IN  A 127.0.0.1
 statusnet IN  AAAA ::1
-_acme-challenge IN      TXT     78ek-28uussbtpjyBItDCkBWX63nXyDON4cQSXwt6sg
+_acme-challenge IN      TXT     jhnXHv23P4RGC6dGmOxdyejc3JWXdfA8wp3G96OkNhw
 @	IN	A	162.243.164.223
 @	IN	AAAA	2604:a880:400:d0::6d7:b001
 @	IN	TXT	( "v=spf1 a:mail.i2p.rocks -all" )
