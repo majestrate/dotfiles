@@ -14,7 +14,7 @@ templates:
 
   defaults:
     transmission:
-      host: 192.168.1.10
+      host: 192.168.0.10
       port: 80
       ratio: 10
 
@@ -159,18 +159,16 @@ tasks:
       - defaults
       - horrible
 
-  anime-asenshi:
-    rss: https://nyaa.si/?page=rss&u=Asenshi
+  noagenda:
+    rss: http://noagendatorrents.com/torrents/feed.rss
     template:
       - defaults
-    regexp:
-      accept:
-        - Kora
+    accept_all: yes
 
-  animes-fate:
-    rss: https://nyaa.si/?page=rss&u=Unlimited+Translation+Works
-    template:
+  hisone:
+    rss: https://nyaa.si/?page=rss&u=Asenshi
+    template: 
       - defaults
     regexp:
-      accept:
-        - Apocrypha
+      accept:       
+        - Hisone
