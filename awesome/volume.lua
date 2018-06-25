@@ -13,17 +13,19 @@ local background_over_100_color = normal_color
 
 -- Functions to fetch volume information (pulseaudio)
 function get_volume() -- returns the volume as a float (1.0 = 100%)
-   local fd = io.popen("pactl list | grep -A 9001 'Sink #0' | grep Volume | head -n 1 | awk -F / '{print $2}' | sed 's/[^0-9]*//g'")
-   local volume_str = fd:read("*all")
-   fd:close()
-   return tonumber(volume_str) / 100
+   --local fd = io.popen("pactl list | grep -A 9001 'Sink #0' | grep Volume | head -n 1 | awk -F / '{print $2}' | sed 's/[^0-9]*//g'")
+   --local volume_str = fd:read("*all")
+   --fd:close()
+   --return tonumber(volume_str) / 100
+   return 0.0
 end
 
 function get_mute() -- returns a true value if muted or a false value if not
-   fd = io.popen("pactl list | grep -A 9001 'Sink #0' | grep Mute | head -n 1")
-   local mute_str = fd:read("*all")
-   fd:close()
-   return string.find(mute_str, "yes")
+   --fd = io.popen("pactl list | grep -A 9001 'Sink #0' | grep Mute | head -n 1")
+   --local mute_str = fd:read("*all")
+   --fd:close()
+   --return string.find(mute_str, "yes")
+   return true
 end
 
 -- Updates the volume widget's display
