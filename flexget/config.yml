@@ -14,7 +14,7 @@ templates:
 
   defaults:
     transmission:
-      host: 192.168.0.10
+      host: vpn
       port: 80
       ratio: 10
 
@@ -135,7 +135,15 @@ templates:
         - \[1080p\]
         - \[360p\]
 
-
+  erai:
+    regexp:
+      accept:
+        - ^\[Erai-raws\]
+      reject:
+        - 400p
+        - 480p
+        - 1080p
+        - 360p
 
 schedules:
   - tasks: 'animes-*'
@@ -152,7 +160,14 @@ tasks:
     template:
       - defaults
     accept_all: yes
-  
+
+  animes-erai: 
+    rss: https://nyaa.si/?page=rss&u=Erai-raws
+    template:
+      - defaults
+      - erai
+ 
+
   animes-horrible:
     rss: https://nyaa.si/?page=rss&u=HorribleSubs
     template:
