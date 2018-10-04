@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 root (
-                     2018061100           ; Serial
+                     2018090800           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                         86400           ; Expire  [1d]
@@ -24,13 +24,12 @@ mail6	IN	AAAA	fcf9:32f:2604:3ede:8fae:67ee:78be:c376
 reseed	IN	AAAA	fc3a:96a1:e061:e523:927:5155:e71d:5047
 irc	IN	AAAA	fc3a:96a1:e061:e523:927:5155:e71d:5047
 probably	IN	A 185.10.68.109
-social    IN  A 185.10.68.109
-social    IN  AAAA 2a06:1700:0:b::44cb:6d
+social    IN  A 206.81.100.178
 git IN A 185.10.68.109
 git IN AAAA 2a06:1700:0:b::44cb:6d
 statusnet IN  A 127.0.0.1
 statusnet IN  AAAA ::1
-_acme-challenge IN      TXT     jhnXHv23P4RGC6dGmOxdyejc3JWXdfA8wp3G96OkNhw
+_acme-challenge IN      TXT     Kuu5FcAkdqoGmHQ229fUt3QwB8enXxhULnxt8Lm1R1w
 @	IN	A	162.243.164.223
 @	IN	AAAA	2604:a880:400:d0::6d7:b001
 @	IN	TXT	( "v=spf1 a:mail.i2p.rocks -all" )
