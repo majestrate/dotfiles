@@ -89,13 +89,12 @@
    (quote
     ("b9cc6c94e60926efca4f4a45bbe5e7df21af1e45aa302b461b9bc6452089f7e5" "97ccd1982746a3298dc6edebbff275736deae002b37bf1797ebaaa42f947bf57" "be496fbe7e6acac40415e02fecaaf636de2cdc18a8237898654ec328f1a97dc9" "93806c69a5d53bdab5bb6cbb6a1ef2eee1474dca4bdab59141a3e3e7efd97e69" "5c2218b2054663054736edddccee54e947ff619387b4e25d4b251e71c7b8b5c0" "d01b7ba4f6f479ff76594894e20d92c8f067809196a161c3351668e8f158fce5" "d3a840caf1d00924035d2989928cf7b52dddfecd1cb54c6120916c0f4ae3d44c" "61698d4777ce41ac2b13aafe5cd1dfbeebfa823915331e4203782b9f8e2c2565" default)))
  '(electric-indent-mode t)
- '(global-auto-complete-mode t)
  '(indent-tabs-mode nil)
  '(jdee-server-dir "/home/jeff/git/jdee-server/jdee-server/")
  '(js-indent-level 2 t)
  '(package-selected-packages
    (quote
-    (typescript-mode company-web flatui-dark-theme mastodon column-enforce-mode kotlin-mode company-erlang erlang lua-mode company-c-headers company-go molokai-theme systemd web-beautify web-completion-data cmake-mode clang-format haskell-mode alchemist elixir-mode yaml-mode go-autocomplete govet markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
+    (helm opencl-mode company-jedi php-mode typescript-mode company-web flatui-dark-theme mastodon column-enforce-mode kotlin-mode company-erlang erlang lua-mode company-c-headers company-go molokai-theme systemd web-beautify web-completion-data cmake-mode clang-format haskell-mode alchemist elixir-mode yaml-mode go-autocomplete govet markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
  '(safe-local-variable-values
    (quote
     ((eval add-hook
@@ -137,15 +136,15 @@
 
 ;;(semantic-mode 1)
 
-
-;; gs
-;;(add-to-list 'load-path "~/git/gnu-social-mode")
-;;(require 'gnu-social-mode)
-;;(setq gnu-social-server "social.i2p.rocks")
-
 (load-theme 'flatui-dark t)
 
 ;;(require 'go-autocomplete)
 ;;(require 'auto-complete-config)
 ;;(ac-config-default)
 
+(defun my/python-mode-hook ()
+  (add-to-list 'company-backends 'company-jedi))
+
+(add-hook 'python-mode-hook 'my/python-mode-hook)
+
+(global-set-key "\t" 'company-complete-common)

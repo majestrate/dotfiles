@@ -43,11 +43,11 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("/home/jeff/.config/awesome/default/theme.lua")
-awful.util.spawn("bash /home/jeff/.config/awesome/autostart.sh")
+awful.spawn("bash /home/jeff/.config/awesome/autostart.sh")
 -- This is used later as the default terminal and editor to run.
 -- terminal = "x-terminal-emulator"
---terminal = "xterm"
-terminal = "terminator"
+terminal = "xterm"
+--terminal = "terminator"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 undec = "bash /home/jeff/bin/undecorate.sh"
@@ -123,6 +123,10 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
+
+
+-- international textclock widget
+worldtextclock = wibox.widget.textclock(timezone="Australia/Melbourne")
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = awful.util.table.join(
@@ -223,6 +227,7 @@ awful.screen.connect_for_each_screen(function(s)
             mykeyboardlayout,
             wibox.widget.systray(),
             mytextclock,
+            worldtextclock,
             s.mylayoutbox,
         },
     }
@@ -290,7 +295,6 @@ globalkeys = awful.util.table.join(
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
-    awful.key({ modkey }, "d", function () awful.spawn(undec) end, {description = "undecorate window", group = "awesome"}),
     awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "layout"}),
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)          end,
@@ -472,7 +476,7 @@ awful.rules.rules = {
       }, properties = { floating = true }},
 
     -- Add titlebars to normal clients and dialogs
-    { rule_any = {type = { "normal", "dialog" }
+    { rule_any = {type = { "dialog" }
       }, properties = { titlebars_enabled = true }
     },
 
