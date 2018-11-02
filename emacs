@@ -24,12 +24,13 @@
 
 ;;(require 'go-autocomplete)
 ;;(require 'auto-complete-config)
-;; (define-key ac-mode-map [(backtab)] 'auto-complete)
+;; (define-key ac-mode-map ([backtab]) 'auto-complete)
 
 ;;(define-key read-expression-map [(tab)] 'hippie-expand)
-;;(global-set-key (kbd "TAB") 'fancy-tab)
 
 ;;(add-hook 'write-contents-hooks (lambda () (tabify (point-min) (point-max))))
+
+(global-set-key "\M-c" 'company-complete)
 
 (when (eq window-system 'x)
   (scroll-bar-mode -1))
@@ -46,9 +47,9 @@
 ;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
 ;;(add-hook 'ruby-mode-hook 'ruby-electric-mode)
 ;;(add-hook 'php-mode-hook 'whitespace-mode)
-;;(add-hook 'c++-mode-hook 'column-highlight-mode)
+;; (add-hook 'c++-mode-hook 'column-highlight-mode)
 ;;(add-hook 'c++-mode-hook 'column-enforce-mode)
-;;(require 'minimap)
+;; (require 'minimap)
 (whitespace-mode)
 
 ;;(require 'web-mode)
@@ -66,8 +67,8 @@
      nil 'fullscreen
      (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
 
-(add-to-list 'default-frame-alist
-             '(font . "Inconsolata-18:width=condensed:weight=light"))
+;;(add-to-list 'default-frame-alist
+;;             '(font . "Inconsolata-16:width=condensed:weight=light"))
 (global-set-key [f11] 'toggle-fullscreen)
 (toggle-fullscreen)
 
@@ -85,16 +86,20 @@
      (end-block space . 2)
      (cpp-end-block space . 2))))
  '(c-indent-comments-syntactically-p (quote set-from-style))
+ '(company-auto-complete t)
+ '(company-auto-complete-chars (quote (32 95 40 41 46 36 39)))
+ '(company-begin-commands (quote (self-insert-command)))
  '(custom-safe-themes
    (quote
     ("b9cc6c94e60926efca4f4a45bbe5e7df21af1e45aa302b461b9bc6452089f7e5" "97ccd1982746a3298dc6edebbff275736deae002b37bf1797ebaaa42f947bf57" "be496fbe7e6acac40415e02fecaaf636de2cdc18a8237898654ec328f1a97dc9" "93806c69a5d53bdab5bb6cbb6a1ef2eee1474dca4bdab59141a3e3e7efd97e69" "5c2218b2054663054736edddccee54e947ff619387b4e25d4b251e71c7b8b5c0" "d01b7ba4f6f479ff76594894e20d92c8f067809196a161c3351668e8f158fce5" "d3a840caf1d00924035d2989928cf7b52dddfecd1cb54c6120916c0f4ae3d44c" "61698d4777ce41ac2b13aafe5cd1dfbeebfa823915331e4203782b9f8e2c2565" default)))
  '(electric-indent-mode t)
+ '(global-company-mode t)
  '(indent-tabs-mode nil)
  '(jdee-server-dir "/home/jeff/git/jdee-server/jdee-server/")
  '(js-indent-level 2 t)
  '(package-selected-packages
    (quote
-    (helm opencl-mode company-jedi php-mode typescript-mode company-web flatui-dark-theme mastodon column-enforce-mode kotlin-mode company-erlang erlang lua-mode company-c-headers company-go molokai-theme systemd web-beautify web-completion-data cmake-mode clang-format haskell-mode alchemist elixir-mode yaml-mode go-autocomplete govet markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
+    (highlight-parentheses highlight-current-line helm-company helm-go-package company-irony-c-headers smex helm opencl-mode company-jedi php-mode typescript-mode company-web flatui-dark-theme mastodon column-enforce-mode kotlin-mode company-erlang erlang lua-mode company-c-headers company-go molokai-theme systemd web-beautify web-completion-data cmake-mode clang-format haskell-mode alchemist elixir-mode yaml-mode go-autocomplete govet markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
  '(safe-local-variable-values
    (quote
     ((eval add-hook
@@ -123,10 +128,20 @@
  )
 
 ;;(require 'jdee)
+
 (require 'company)
-(require 'company-go)
+;;(require 'company-go)
 (add-hook 'after-init-hook 'global-company-mode)
 (setq company-begin-commands '(self-insert-command)) 
+(add-to-list 'company-backends 'company-c-headers)
+
+(require 'helm)
+(require 'helm-config)
+(global-unset-key (kbd "M-x"))
+(global-set-key (kbd "M-x") 'helm-M-x)
+
+(helm-mode 1)
+
 
 ;;(require 'cc-mode)
 ;;(require 'semantic)
@@ -147,4 +162,5 @@
 
 (add-hook 'python-mode-hook 'my/python-mode-hook)
 
-(global-set-key "\t" 'company-complete-common)
+;;(global-set-key "\t" 'company-complete-common)
+

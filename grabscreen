@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+test "x$1" != "x" && (slurp | grim -g - -t jpeg -c "$1")
