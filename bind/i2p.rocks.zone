@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 root (
-                     2018090800           ; Serial
+                     2018111600           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                         86400           ; Expire  [1d]
@@ -23,6 +23,7 @@ _onion-mx._tcp	IN	SRV	0 5 25 xfg4wqfyvsi7e45p.onion.
 mail6	IN	AAAA	fcf9:32f:2604:3ede:8fae:67ee:78be:c376
 reseed	IN	AAAA	fc3a:96a1:e061:e523:927:5155:e71d:5047
 irc	IN	AAAA	fc3a:96a1:e061:e523:927:5155:e71d:5047
+exit	IN	A 185.10.68.109
 probably	IN	A 185.10.68.109
 social    IN  A 206.81.100.178
 git IN A 185.10.68.109
