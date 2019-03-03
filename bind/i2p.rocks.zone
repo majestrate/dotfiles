@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 root (
-                     2018111600           ; Serial
+                     2018120800           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                         86400           ; Expire  [1d]
@@ -16,8 +16,9 @@ mail	IN	TXT	( "v=spf1 mx a:mail.i2p.rocks -all" )
 ns1	IN	A	185.10.68.109	
 ns3	IN	A	162.243.164.223
 mail	IN	A	162.243.164.223
-_xmpp-server._tcp	IN	SRV	0 5 5269 i2p.rocks.
-_xmpp-client._tcp	IN	SRV	0 5 5222 i2p.rocks.
+xmpp	IN	A	162.243.164.223
+_xmpp-server._tcp	IN	SRV	0 5 5269 xmpp.i2p.rocks.
+_xmpp-client._tcp	IN	SRV	0 5 5222 xmpp.i2p.rocks.
 _matrix._tcp	IN	SRV	10 5 443 i2p.rocks.
 _onion-mx._tcp	IN	SRV	0 5 25 xfg4wqfyvsi7e45p.onion.
 mail6	IN	AAAA	fcf9:32f:2604:3ede:8fae:67ee:78be:c376
@@ -30,7 +31,7 @@ git IN A 185.10.68.109
 git IN AAAA 2a06:1700:0:b::44cb:6d
 statusnet IN  A 127.0.0.1
 statusnet IN  AAAA ::1
-_acme-challenge IN      TXT     Kuu5FcAkdqoGmHQ229fUt3QwB8enXxhULnxt8Lm1R1w
+_acme-challenge IN      TXT pID-AQbH8lWhTCe06CqAEeC3qMPgftMmNs6J19FgNxo
 @	IN	A	162.243.164.223
 @	IN	AAAA	2604:a880:400:d0::6d7:b001
 @	IN	TXT	( "v=spf1 a:mail.i2p.rocks -all" )
