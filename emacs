@@ -67,8 +67,8 @@
      nil 'fullscreen
      (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
 
-;;(add-to-list 'default-frame-alist
-;;             '(font . "Inconsolata-16:width=condensed:weight=light"))
+(add-to-list 'default-frame-alist
+             '(font . "Inconsolata-18:width=condensed:weight=light"))
 (global-set-key [f11] 'toggle-fullscreen)
 (toggle-fullscreen)
 
@@ -99,7 +99,7 @@
  '(js-indent-level 2 t)
  '(package-selected-packages
    (quote
-    (highlight-parentheses highlight-current-line helm-company helm-go-package company-irony-c-headers smex helm opencl-mode company-jedi php-mode typescript-mode company-web flatui-dark-theme mastodon column-enforce-mode kotlin-mode company-erlang erlang lua-mode company-c-headers company-go molokai-theme systemd web-beautify web-completion-data cmake-mode clang-format haskell-mode alchemist elixir-mode yaml-mode go-autocomplete govet markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
+    (magit highlight-parentheses highlight-current-line helm-company helm-go-package company-irony-c-headers smex helm opencl-mode company-jedi php-mode typescript-mode company-web flatui-dark-theme mastodon column-enforce-mode kotlin-mode company-erlang erlang lua-mode company-c-headers company-go molokai-theme systemd web-beautify web-completion-data cmake-mode clang-format haskell-mode alchemist elixir-mode yaml-mode go-autocomplete govet markdown-mode go-mode color-theme-molokai color-theme jdee web-mode)))
  '(safe-local-variable-values
    (quote
     ((eval add-hook
@@ -164,3 +164,4 @@
 
 ;;(global-set-key "\t" 'company-complete-common)
 
+(color-theme-molokai)
