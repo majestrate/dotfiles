@@ -1,0 +1,2 @@
+"head /dev/urandom | aplay -r 10000 -c 2"
+  control + q
