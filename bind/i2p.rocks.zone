@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 root (
-                     2019040400           ; Serial
+                     2019053001           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                         86400           ; Expire  [1d]
@@ -13,7 +13,7 @@ $TTL    3600
 201708._domainkey       IN      TXT     ( "v=DKIM1; h=sha256; k=rsa; s=email; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDNVOqb8e8Xgjx+ue3p6uDLDJKF2D60x7GkE2suZ8Xu3KF4gMUup8w/yUdZDojXHNe1AxVt8JczUDxIJimf6hEry6vWqkO5EB7sg/u7i3Ljbwff6c8tJC88ReKJv4Hh3tbgf2HDlQ+XohAZgoLEwOAz2iHjzQISNy/V8LWSmeoCXQIDAQAB" )
 *._domainkey       IN      TXT     ( "v=DKIM1; h=sha256; k=rsa; s=email; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDNVOqb8e8Xgjx+ue3p6uDLDJKF2D60x7GkE2suZ8Xu3KF4gMUup8w/yUdZDojXHNe1AxVt8JczUDxIJimf6hEry6vWqkO5EB7sg/u7i3Ljbwff6c8tJC88ReKJv4Hh3tbgf2HDlQ+XohAZgoLEwOAz2iHjzQISNy/V8LWSmeoCXQIDAQAB" )
 mail	IN	TXT	( "v=spf1 mx a:mail.i2p.rocks -all" )
-ns1	IN	A	185.10.68.109	
+ns1	IN	A	51.79.57.234
 ns3	IN	A	162.243.164.223
 mail	IN	A	162.243.164.223
 xmpp	IN	A	162.243.164.223
@@ -25,11 +25,10 @@ mail6	IN	AAAA	fcf9:32f:2604:3ede:8fae:67ee:78be:c376
 reseed	IN	AAAA	fc3a:96a1:e061:e523:927:5155:e71d:5047
 irc	IN	AAAA	fc3a:96a1:e061:e523:927:5155:e71d:5047
 y   IN  AAAA  203:e0b0:ec08:4e1f:f004:19a9:577a:90ba
-exit	IN	A 185.10.68.109
-probably	IN	A 185.10.68.109
+exit	IN	A 51.79.57.234
 social    IN  A 206.81.100.178
-git IN A 185.10.68.109
-git IN AAAA 2a06:1700:0:b::44cb:6d
+git IN A 51.79.57.234
+git IN AAAA 2607:5300:203:5331:234::1
 statusnet IN  A 127.0.0.1
 statusnet IN  AAAA ::1
 _acme-challenge IN      TXT 0lTjTXuLj61zVf0c9HkP9RQRB4AGEyPgn-FhqNOuHJk
