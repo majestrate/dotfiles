@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 root (
-                     2019061901           ; Serial
+                     2019061902           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                         86400           ; Expire  [1d]
@@ -27,6 +27,7 @@ irc	IN	AAAA	fc3a:96a1:e061:e523:927:5155:e71d:5047
 y   IN  AAAA  203:e0b0:ec08:4e1f:f004:19a9:577a:90ba
 exit	IN	A 51.79.57.234
 lokinet-webhooks	IN	A 51.79.57.234
+lokinet-webhooks  IN  AAAA  2607:5300:203:5331:234::1
 social    IN  A 206.81.100.178
 git IN A 51.79.57.234
 git IN AAAA 2607:5300:203:5331:234::1
