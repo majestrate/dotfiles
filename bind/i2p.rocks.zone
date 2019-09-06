@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 root (
-                     2019090501           ; Serial
+                     2019090602           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                         86400           ; Expire  [1d]
@@ -14,16 +14,12 @@ $TTL    3600
 *._domainkey       IN      TXT     ( "v=DKIM1; h=sha256; k=rsa; s=email; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDNVOqb8e8Xgjx+ue3p6uDLDJKF2D60x7GkE2suZ8Xu3KF4gMUup8w/yUdZDojXHNe1AxVt8JczUDxIJimf6hEry6vWqkO5EB7sg/u7i3Ljbwff6c8tJC88ReKJv4Hh3tbgf2HDlQ+XohAZgoLEwOAz2iHjzQISNy/V8LWSmeoCXQIDAQAB" )
 mail	IN	TXT	( "v=spf1 mx a:mail.i2p.rocks -all" )
 ns1	IN	A	51.79.57.234
-ns3	IN	A	162.243.164.223
-mail	IN	A	162.243.164.223
-xmpp	IN	A	162.243.164.223
+ns3	IN	A	185.83.214.123
+mail	IN	A	185.83.214.123
+xmpp	IN	A	185.83.214.123
 _xmpp-server._tcp	IN	SRV	0 5 5269 xmpp.i2p.rocks.
 _xmpp-client._tcp	IN	SRV	0 5 5222 xmpp.i2p.rocks.
-_matrix._tcp	IN	SRV	10 5 443 i2p.rocks.
-_onion-mx._tcp	IN	SRV	0 5 25 xfg4wqfyvsi7e45p.onion.
 mail6	IN	AAAA	fcf9:32f:2604:3ede:8fae:67ee:78be:c376
-reseed	IN	AAAA	fc3a:96a1:e061:e523:927:5155:e71d:5047
-irc	IN	AAAA	fc3a:96a1:e061:e523:927:5155:e71d:5047
 y   IN  AAAA  203:e0b0:ec08:4e1f:f004:19a9:577a:90ba
 exit	IN	A 185.10.68.109
 lokinet-webhooks	IN	A 51.79.57.234
@@ -34,8 +30,6 @@ git IN AAAA 2607:5300:203:5331:234::1
 statusnet IN  A 127.0.0.1
 statusnet IN  AAAA ::1
 _acme-challenge IN      TXT vjtdJOOXdbMkj3VHKkgmPnkJQRlzRWS46R_TJr8ThPk
-@	IN	A	162.243.164.223
+@	IN	A	185.83.214.123
 @	IN	AAAA	2604:a880:400:d0::6d7:b001
 @	IN	TXT	( "v=spf1 a:mail.i2p.rocks -all" )
-*	IN	A	162.243.164.223
-*	IN	AAAA	2604:a880:400:d0::6d7:b001
