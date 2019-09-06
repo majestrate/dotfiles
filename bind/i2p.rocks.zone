@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 root (
-                     2019090602           ; Serial
+                     2019090603           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                         86400           ; Expire  [1d]
@@ -31,5 +31,4 @@ statusnet IN  A 127.0.0.1
 statusnet IN  AAAA ::1
 _acme-challenge IN      TXT vjtdJOOXdbMkj3VHKkgmPnkJQRlzRWS46R_TJr8ThPk
 @	IN	A	185.83.214.123
-@	IN	AAAA	2604:a880:400:d0::6d7:b001
 @	IN	TXT	( "v=spf1 a:mail.i2p.rocks -all" )
