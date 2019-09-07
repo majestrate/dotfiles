@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 root (
-                     2019090702           ; Serial
+                     2019090703           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                           600           ; Expire  [1d]
@@ -19,7 +19,7 @@ mail	IN	A	185.83.214.123
 xmpp	IN	A	185.83.214.123
 _xmpp-server._tcp	IN	SRV	0 5 5269 xmpp.i2p.rocks.
 _xmpp-client._tcp	IN	SRV	0 5 5222 xmpp.i2p.rocks.
-mail6	IN	AAAA	fcf9:32f:2604:3ede:8fae:67ee:78be:c376
+mail6	IN	AAAA	201:30be:376:9eb9:160c:249f:881a:5c7e
 y   IN  AAAA  203:e0b0:ec08:4e1f:f004:19a9:577a:90ba
 exit	IN	A 185.10.68.109
 lokinet-webhooks	IN	A 51.79.57.234
