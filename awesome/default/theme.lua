@@ -4,23 +4,40 @@
 
 theme = {}
 
+--local color_lbwn = "#a88b8c"
+--local color_whit = "#cecdcc"
+--local color_grey = "#545455"
+--local color_purp = "#433d48"
+--local color_dbwn = "#5b4b4f"
+local color_lbwn = "#797cbc"
+local color_whit = "#ddd8d8"
+local color_grey = "#3c3f34"
+local color_purp = "#60577e"
+local color_dbwn = "#63355c"
+
+theme.lbwn = color_lbwn
+theme.whit = color_whit
+theme.grey = color_grey
+theme.dbwn = color_dbwn
+theme.purp = color_purp
+
 theme.font          = "sans 8"
 
-theme.bg_normal     = "#222222"
-theme.bg_focus      = "#535d6c"
-theme.bg_urgent     = "#ff0000"
-theme.bg_minimize   = "#444444"
+theme.bg_normal     = color_whit
+theme.bg_focus      = color_purp
+theme.bg_urgent     = color_lbwn
+theme.bg_minimize   = color_grey
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#aaaaaa"
-theme.fg_focus      = "#ffffff"
-theme.fg_urgent     = "#ffffff"
-theme.fg_minimize   = "#ffffff"
+theme.fg_normal     = color_dbwn
+theme.fg_focus      = color_whit
+theme.fg_urgent     = color_grey
+theme.fg_minimize   = color_purp
 
 theme.border_width  = 1
-theme.border_normal = "#000000"
-theme.border_focus  = "#535d6c"
-theme.border_marked = "#91231c"
+theme.border_normal = color_purp
+theme.border_focus  = color_lbwn
+theme.border_marked = color_grey
 
 -- There are other variable sets
 -- overriding the default one when
@@ -90,7 +107,7 @@ theme.layout_tiletop = "/usr/share/awesome/themes/default/layouts/tiletopw.png"
 theme.layout_spiral  = "/usr/share/awesome/themes/default/layouts/spiralw.png"
 theme.layout_dwindle = "/usr/share/awesome/themes/default/layouts/dwindlew.png"
 
-theme.awesome_icon = "/usr/share/awesome/icons/awesome16.png"
+theme.awesome_icon = "/home/jeff/.config/awesome/icon.png"
 
 -- Define the icon theme for application icons. If not set then the icons 
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.

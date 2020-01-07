@@ -45,8 +45,8 @@ end
 beautiful.init("/home/jeff/.config/awesome/default/theme.lua")
 awful.spawn("bash /home/jeff/.config/awesome/autostart.sh")
 -- This is used later as the default terminal and editor to run.
--- terminal = "x-terminal-emulator"
-terminal = "xterm"
+terminal = "x-terminal-emulator"
+-- terminal = "/home/jeff/bin/st"
 --terminal = "terminator"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
@@ -121,12 +121,15 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
--- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+-- local textclock widget
+est_clock = wibox.widget.textclock("[EST:%x %a %X] ", 1)
 
+-- UTC textclock widget
+utc_clock = wibox.widget.textclock("[UTC:%x %a %X] ", 1, "Z")
 
--- international textclock widget
-worldtextclock = wibox.widget.textclock(timezone="Australia/Melbourne")
+-- AUS textclock widget
+aus_clock = wibox.widget.textclock("[AUS:%x %a %X] ", 1, "Australia/Melbourne")
+
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = awful.util.table.join(
@@ -211,7 +214,7 @@ awful.screen.connect_for_each_screen(function(s)
 
     -- Create the wibox
     s.mywibox = awful.wibar({ position = "top", screen = s })
-
+    local t = beautiful.get()
     -- Add widgets to the wibox
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
@@ -222,14 +225,32 @@ awful.screen.connect_for_each_screen(function(s)
             s.mypromptbox,
         },
         s.mytasklist, -- Middle widget
-        { -- Right widgets
-            layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
-            wibox.widget.systray(),
-            mytextclock,
-            worldtextclock,
-            s.mylayoutbox,
-        },
+        {
+           wibox.widget.systray(),
+           layout = wibox.layout.fixed.horizontal,
+           wibox.widget.systray(),
+           -- utc clock
+           {
+              utc_clock,
+              fg = t.lbwn,
+              bg = t.purp,
+              widget = wibox.container.background
+           },
+           -- local clock
+           {
+              est_clock,
+              fg = t.whit,
+              bg = t.grey,
+              widget = wibox.container.background
+           },
+           -- aus clock
+           {
+              aus_clock,
+              fg = t.whit,
+              bg = t.purp,
+              widget = wibox.container.background
+           }
+        }
     }
 end)
 -- }}}
@@ -554,3 +575,4 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+
