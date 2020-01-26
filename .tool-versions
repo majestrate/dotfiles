@@ -1,4 +1,5 @@
-nodejs 10.15.2
-elixir 1.8.1
-python 3.7.2
-erlang 21.2.6
+nodejs 10.13.0
+python 3.8.1
+golang 1.13.6
+cmake 3.16.3
+meson 0.53.1
