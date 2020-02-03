@@ -124,8 +124,8 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 -- local textclock widget
 est_clock = wibox.widget.textclock("[EST:%x %a %X] ", 1)
 
--- UTC textclock widget
-utc_clock = wibox.widget.textclock("[UTC:%x %a %X] ", 1, "Z")
+-- MST textclock widget
+utc_clock = wibox.widget.textclock("[MST:%x %a %X] ", 1, "MST")
 
 -- AUS textclock widget
 aus_clock = wibox.widget.textclock("[AUS:%x %a %X] ", 1, "Australia/Melbourne")
@@ -232,7 +232,7 @@ awful.screen.connect_for_each_screen(function(s)
            -- utc clock
            {
               utc_clock,
-              fg = t.lbwn,
+              fg = t.whit,
               bg = t.purp,
               widget = wibox.container.background
            },
