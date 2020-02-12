@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 root (
-                     2020021202           ; Serial
+                     2020021203           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                           600           ; Expire  [1d]
@@ -24,7 +24,7 @@ _xmpp-server._tcp	IN	SRV	0 5 5269 xmpp.i2p.rocks.
 _xmpp-client._tcp	IN	SRV	0 5 5222 xmpp.i2p.rocks.
 mail6	IN	AAAA	201:30be:376:9eb9:160c:249f:881a:5c7e
 y   IN  AAAA  203:e0b0:ec08:4e1f:f004:19a9:577a:90ba
-lokinet-wiki IN CNAME dw68y1xhptqbhcm5s8aaaip6dbopykagig5q5u1za4c7pzxto77y.loki.
+wiki IN CNAME dw68y1xhptqbhcm5s8aaaip6dbopykagig5q5u1za4c7pzxto77y.loki.
 exit	IN	A 185.10.68.109
 lokinet-webhooks	IN	A 51.79.57.234
 lokinet-webhooks  IN  AAAA  2607:5300:203:5331:234::1
