@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 root (
-                     2020030500           ; Serial
+                     2020042300           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                           600           ; Expire  [1d]
@@ -14,13 +14,11 @@ $TTL    3600
 *._domainkey       IN      TXT     ( "v=DKIM1; h=sha256; k=rsa; s=email; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDNVOqb8e8Xgjx+ue3p6uDLDJKF2D60x7GkE2suZ8Xu3KF4gMUup8w/yUdZDojXHNe1AxVt8JczUDxIJimf6hEry6vWqkO5EB7sg/u7i3Ljbwff6c8tJC88ReKJv4Hh3tbgf2HDlQ+XohAZgoLEwOAz2iHjzQISNy/V8LWSmeoCXQIDAQAB" )
 mail	IN	TXT	( "v=spf1 mx a:mail.i2p.rocks -all" )
 ns1	IN	A	185.10.68.109
-ns2	IN	A	185.83.214.123
-mail	IN	A	185.83.214.123
-pl	IN	A	185.83.214.123
-xmpp	IN	A	185.83.214.123
-turn IN A 185.83.214.123
-opentracker IN A 185.83.214.123
-bitchan IN A 185.83.214.123
+ns2	IN	A	51.81.46.170
+mail	IN	A	51.81.46.170
+pl	IN	A	51.81.46.170
+xmpp	IN	A	51.81.46.170
+opentracker IN A 51.81.46.170
 _xmpp-server._tcp	IN	SRV	0 5 5269 i2p.rocks.
 _xmpp-client._tcp	IN	SRV	0 5 5222 i2p.rocks.
 mail6	IN	AAAA	201:30be:376:9eb9:160c:249f:881a:5c7e
@@ -29,10 +27,9 @@ wiki IN CNAME dw68y1xhptqbhcm5s8aaaip6dbopykagig5q5u1za4c7pzxto77y.loki.
 exit	IN	A 185.10.68.109
 lokinet-webhooks	IN	A 51.79.57.234
 lokinet-webhooks  IN  AAAA  2607:5300:203:5331:234::1
-social    IN  A 185.83.214.123
-git IN A 185.83.214.123
+git IN A 51.81.46.170
 statusnet IN  A 127.0.0.1
 statusnet IN  AAAA ::1
 _acme-challenge IN      TXT 9eIRgy8izeL_9Fn28Tf6xB44VDUeCyjNS7LxsSosNpA
-@	IN	A	185.83.214.123
+@	IN	A	51.81.46.170
 @	IN	TXT	( "v=spf1 a:mail.i2p.rocks -all" )
