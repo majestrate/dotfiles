@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 root (
-                     2020042300           ; Serial
+                     2020042301           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                           600           ; Expire  [1d]
@@ -18,7 +18,6 @@ ns2	IN	A	51.81.46.170
 mail	IN	A	51.81.46.170
 pl	IN	A	51.81.46.170
 xmpp	IN	A	51.81.46.170
-opentracker IN A 51.81.46.170
 _xmpp-server._tcp	IN	SRV	0 5 5269 i2p.rocks.
 _xmpp-client._tcp	IN	SRV	0 5 5222 i2p.rocks.
 mail6	IN	AAAA	201:30be:376:9eb9:160c:249f:881a:5c7e
