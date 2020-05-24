@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 root (
-                     2020050900           ; Serial
+                     2020052400           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                           600           ; Expire  [1d]
@@ -28,6 +28,7 @@ exit	IN	A 185.10.68.109
 lokinet-webhooks	IN	A 51.79.57.234
 lokinet-webhooks  IN  AAAA  2607:5300:203:5331:234::1
 git IN A 51.81.46.170
+ib IN A 51.81.46.170
 statusnet IN  A 127.0.0.1
 statusnet IN  AAAA ::1
 _acme-challenge IN      TXT 9eIRgy8izeL_9Fn28Tf6xB44VDUeCyjNS7LxsSosNpA
