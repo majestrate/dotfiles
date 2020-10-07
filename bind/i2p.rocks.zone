@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 root (
-                     2020091400           ; Serial
+                     2020100700           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                           600           ; Expire  [1d]
@@ -20,8 +20,10 @@ mail	IN	A	51.81.46.170
 pl	IN	A	51.81.46.170
 xmpp	IN	A	51.81.46.170
 opentracker	IN	A	51.81.46.170
-_xmpp-server._tcp	IN	SRV	0 5 5269 xmpp.i2p.rocks.
-_xmpp-client._tcp	IN	SRV	0 5 5222 xmpp.i2p.rocks.
+_xmpp-server._tcp	IN	SRV	5 5 5269 zhrxg3kuc59g85k9xrih71t9tn7dp7ysd7bfgzfww1dnqcirq75y.loki.
+_xmpp-client._tcp	IN	SRV	5 5 5222 zhrxg3kuc59g85k9xrih71t9tn7dp7ysd7bfgzfww1dnqcirq75y.loki.
+_xmpp-server._tcp	IN	SRV	10 5 5269 xmpp.i2p.rocks.
+_xmpp-client._tcp	IN	SRV	10 5 5222 xmpp.i2p.rocks.
 mail6	IN	AAAA	200:3ff0:ad76:e386:5872:2295:22fd:fc58
 y   IN  AAAA  203:e0b0:ec08:4e1f:f004:19a9:577a:90ba
 wiki IN CNAME dw68y1xhptqbhcm5s8aaaip6dbopykagig5q5u1za4c7pzxto77y.loki.
