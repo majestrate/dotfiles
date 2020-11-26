@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 root (
-                     2020112600           ; Serial
+                     2020112601           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                           600           ; Expire  [1d]
@@ -20,7 +20,7 @@ mail	IN	A	51.81.46.170
 pl	IN	A	51.81.46.170
 xmpp	IN	A	51.81.46.170
 opentracker	IN	A	51.81.46.170
-opentracker IN TXT ( "BITTORRENT UDP:6969" )
+opentracker IN TXT ( "BITTORRENT UDP:6969 TCP:6969" )
 _xmpp-server._tcp	IN	SRV	5 5 5269 zhrxg3kuc59g85k9xrih71t9tn7dp7ysd7bfgzfww1dnqcirq75y.loki.
 _xmpp-client._tcp	IN	SRV	5 5 5222 zhrxg3kuc59g85k9xrih71t9tn7dp7ysd7bfgzfww1dnqcirq75y.loki.
 _xmpp-server._tcp	IN	SRV	10 5 5269 xmpp.i2p.rocks.
