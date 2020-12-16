@@ -1,23 +1,15 @@
-
-
 templates:
 
-  youtube:
-    accept_all: yes
-    exec:
-      on_output:
-        for_accepted: youtube-dl "{{url}}"
-    notify:
-      task:
-        via:
-          - toast: yes
+  announce:
+    exec: /home/jeff/bin/post.sh '{{title}}' '{{url}}'
 
   defaults:
     transmission:
-      host: vpn
-      port: 80
+      host: 127.0.0.1
+      port: 9091
       ratio: 10
-
+      username: transmission
+      password: transmission
   aviguy:
     if:
       - "'AVIGUY' in author": accept
@@ -49,7 +41,19 @@ templates:
     if:
       - "'BOZX' in author" : accept
 
-  
+  kumo:
+    regexp:
+      accept:
+        - Kumo
+      reject:
+        - sisters
+
+  dank:
+    regexp:
+      accept:
+        - Digital
+      reject:
+        - PNG4  
   commie:
     regexp:
       accept:
@@ -128,62 +132,63 @@ templates:
   horrible:
     regexp:
       accept:
-        - ^\[HorribleSubs\]
+        - ^\[SubsPlease\]
       reject:
-        - \[400p\]
-        - \[480p\]
-        - \[1080p\]
-        - \[360p\]
+        - \(400p\)
+        - \(480p\)
+        - \(1080p\)
+        - \(360p\)
 
   erai:
     regexp:
       accept:
         - ^\[Erai-raws\]
       reject:
+        - \[v0\]
         - 400p
         - 480p
         - 1080p
         - 360p
-
+        - 540p
 schedules:
   - tasks: 'animes-*'
-    interval:
-      hours: 1
-  - tasks: 'tv'
     interval:
       hours: 1
 
 tasks:
 
+#  tv:
+#    rss: http://showrss.info/user/153353.rss?magnets=true&namespaces=false&name=clean&quality=hd&re=no
+#    template:
+#      - defaults
+#    accept_all: yes
   tv:
-    rss: http://showrss.info/user/153353.rss?magnets=true&namespaces=false&name=clean&quality=hd&re=no
+    rss: http://showrss.info/user/231825.rss?magnets=true&namespaces=false&name=clean&quality=hd&re=no
     template:
       - defaults
     accept_all: yes
 
-  animes-erai: 
+  animes-erai:
     rss: https://nyaa.si/?page=rss&u=Erai-raws
     template:
       - defaults
       - erai
- 
 
-  animes-horrible:
-    rss: https://nyaa.si/?page=rss&u=HorribleSubs
+  animes-subs:
+    rss: https://nyaa.si/?page=rss&u=subsplease
     template:
       - defaults
       - horrible
+      - announce
 
-  noagenda:
-    rss: http://noagendatorrents.com/torrents/feed.rss
+  anime-cbz:
+    rss: https://nyaa.si/?page=rss&u=danke
     template:
       - defaults
-    accept_all: yes
+      - dank
 
-  hisone:
-    rss: https://nyaa.si/?page=rss&u=Asenshi
-    template: 
+  anime-kumo:
+    rss: https://nyaa.si/?page=rss&u=aumakua
+    template:
       - defaults
-    regexp:
-      accept:       
-        - Hisone
+      - kumo
