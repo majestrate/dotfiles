@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 root (
-                     2020112601           ; Serial
+                     2021022500           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                           600           ; Expire  [1d]
@@ -17,6 +17,7 @@ mail	IN	TXT	( "v=spf1 mx a:mail.i2p.rocks -all" )
 ns1	IN	A	185.10.68.109
 ns2	IN	A	51.81.46.170
 mail	IN	A	51.81.46.170
+dreg	IN	A	51.81.46.170
 pl	IN	A	51.81.46.170
 xmpp	IN	A	51.81.46.170
 opentracker	IN	A	51.81.46.170
