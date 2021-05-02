@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 ns2 (
-                     2021032500           ; Serial
+                     2021050200           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                           600           ; Expire  [1d]
@@ -8,12 +8,13 @@ $TTL    3600
 ;
 	IN	NS	ns1.i2p.rocks.
 	IN	NS	ns2.i2p.rocks.
-	IN	MX	10 mail.i2p.rocks.
+  IN  MX  10 gha9cxqjzrbcu5dxnx7riomnitm94gkzxcghdmb1nogd5f9oj7oy.loki.
+	IN	MX	20 mail.i2p.rocks.
 
 default._domainkey      IN      TXT     ( "v=DKIM1; h=sha256; k=rsa; "
           "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtlrLHynPbLVWje2TqCX9EQrbdur7/wTU24O9Emi0Q27ebCIubBeHeeS75Dv0acqIkZqpZyog14TXP527LuQfu9d+eYyQ+VwHngqGgApi0FmR72jlc61uzBlt33ojtIiXOKWcVQ2tSmHyrD/uSRkptHg7y+eyHQtYBe6Y+n0p4oLSVJtK+AbKYzxCseO8ikKDH2slSou09/qsnG"
           "xlSuZa5xBjfWbWEep2dzl7Bf/pze5/PjOYpJMRa+DmRwxQ6LskgaUMY/GOM2XiBk4zudxrGU4tY5AnKBGHmN/UdDUwUUiHDUBKhddUj5hWss60gg9eKVG56t4tKS2QYBkOu5mfaQIDAQAB" )  ; ----- DKIM key default for i2p.rocks
-mail	IN	TXT	( "v=spf1 mx a:mail.i2p.rocks -all" )
+mail	IN	TXT	( "v=spf1 mx a:mail.i2p.rocks a:gha9cxqjzrbcu5dxnx7riomnitm94gkzxcghdmb1nogd5f9oj7oy.loki -all" )
 ns1	IN	A	185.10.68.109
 ns2	IN	A	51.81.46.170
 dreg	IN	A	51.81.46.170
