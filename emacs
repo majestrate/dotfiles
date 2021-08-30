@@ -8,8 +8,10 @@
 (global-unset-key "\M-w")
 (global-set-key "\C-e" 'kill)
 
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("melpa" . "https://melpa.org/packages/")))
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 
 (package-initialize)
 (column-number-mode)
@@ -49,7 +51,7 @@
 (eval-when-compile
   (require 'use-package))
 
-;; (use-package whitespace-mode :ensure t)
+;;(use-package whitespace-mode :ensure t)
 (use-package web-mode :ensure t)
 (use-package lsp-mode :ensure t)
 (use-package lsp-ui :ensure t)
@@ -70,7 +72,7 @@
 (add-to-list 'auto-mode-alist '("\\.js'" . web-mode))
 (setq web-mode-enable-css-colorization t)
 (add-to-list 'default-frame-alist
-           '(font . "Inconsolata-12:width=condensed:weight=light"))
+           '(font . "Inconsolata-18:width=condensed:weight=light"))
 
 (defun toggle-fullscreen ()
   "Toggle full screen on X11"
@@ -94,20 +96,16 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (monokai)))
+ '(custom-enabled-themes '(monokai))
  '(custom-safe-themes
-   (quote
-    ("95b0bc7b8687101335ebbf770828b641f2befdcf6d3c192243a251ce72ab1692" "d9646b131c4aa37f01f909fbdd5a9099389518eb68f25277ed19ba99adeb7279" "8b58ef2d23b6d164988a607ee153fd2fa35ee33efc394281b1028c2797ddeebb" "f3ab34b145c3b2a0f3a570ddff8fabb92dafc7679ac19444c31058ac305275e1" default)))
+   '("95b0bc7b8687101335ebbf770828b641f2befdcf6d3c192243a251ce72ab1692" "d9646b131c4aa37f01f909fbdd5a9099389518eb68f25277ed19ba99adeb7279" "8b58ef2d23b6d164988a607ee153fd2fa35ee33efc394281b1028c2797ddeebb" "f3ab34b145c3b2a0f3a570ddff8fabb92dafc7679ac19444c31058ac305275e1" default))
  '(package-selected-packages
-   (quote
-    (use-package treemacs lua-mode hl-indent hl-todo rust-mode groovy-mode dockerfile-mode go-mode company-lsp lsp-ui yasnippet dart-mode lsp-dart flutter markdown-mode+ qml-mode cmake-mode jinja2-mode typescript-mode magit-gh-pulls magit-lfs magit gradle-mode jsonnet-mode lsp-treemacs monokai-theme)))
+   '(luarocks activity-watch-mode treemacs-magit lsp-mode yaml-mode kotlin-mode protobuf-mode deno-fmt use-package treemacs lua-mode hl-indent hl-todo rust-mode groovy-mode dockerfile-mode go-mode company-lsp lsp-ui yasnippet dart-mode lsp-dart flutter markdown-mode+ qml-mode cmake-mode jinja2-mode typescript-mode magit-gh-pulls magit-lfs magit gradle-mode jsonnet-mode lsp-treemacs monokai-theme))
  '(safe-local-variable-values
-   (quote
-    ((eval message "Project directory set to `%s'." my-project-path)
+   '((eval message "Project directory set to `%s'." my-project-path)
      (eval setenv "GOPATH" my-project-path)
      (eval set
-           (make-local-variable
-            (quote my-project-path))
+           (make-local-variable 'my-project-path)
            (file-name-directory
             (let
                 ((d
@@ -116,10 +114,7 @@
                   (stringp d)
                   d
                 (car d)))))
-     (eval add-hook
-           (quote before-save-hook)
-           (function clang-format-buffer)
-           nil t)))))
+     (eval add-hook 'before-save-hook #'clang-format-buffer nil t))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -127,4 +122,5 @@
  ;; If there is more than one, they won't work right.
  )
 
-;; (treemacs)
+;; (treemacs
+;;(global-activity-watch-mode)
