@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 ns2 (
-                     2021100700           ; Serial
+                     2021111801           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                           600           ; Expire  [1d]
@@ -40,7 +40,7 @@ wiki IN CNAME dw68y1xhptqbhcm5s8aaaip6dbopykagig5q5u1za4c7pzxto77y.loki.
 git IN A 51.81.46.170
 statusnet IN  A 127.0.0.1
 statusnet IN  AAAA ::1
-_acme-challenge IN      TXT 9eIRgy8izeL_9Fn28Tf6xB44VDUeCyjNS7LxsSosNpA
+lokinet   IN  CNAME yes.loki.
 @	IN	A	65.108.59.77
 @	IN	TXT	( "v=spf1 a:mail.i2p.rocks -all" )
 ;mail  IN AAAA 2a0a:c800:1:15:b00b::c
