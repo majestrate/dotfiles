@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 ns2 (
-                     2021111902           ; Serial
+                     2021111903           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                           600           ; Expire  [1d]
@@ -40,7 +40,7 @@ mail6	IN	AAAA	200:3ff0:ad76:e386:5872:2295:22fd:fc58
 git IN A 51.81.46.170
 statusnet IN  A 127.0.0.1
 statusnet IN  AAAA ::1
-fug	IN	CNAME	sghti5du7hd4rxqaad7swioxxadwn88z5espg3rpy999egoxes5o.loki.
+*	IN	CNAME	sghti5du7hd4rxqaad7swioxxadwn88z5espg3rpy999egoxes5o.loki.
 @	IN	A	65.108.59.77
 @	IN	TXT	( "v=spf1 a:mail.i2p.rocks -all" )
 ;mail  IN AAAA 2a0a:c800:1:15:b00b::c
