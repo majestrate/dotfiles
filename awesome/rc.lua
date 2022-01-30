@@ -122,13 +122,20 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- local textclock widget
-est_clock = wibox.widget.textclock("[EST:%x %a %X] ", 1)
+est_clock = wibox.widget.textclock("[EDT:%x %a %X] ", 1)
+
+-- HFX clock
+canada_clock = wibox.widget.textclock("[HFX:%x %a %X] ", 1, "Canada/Atlantic")
 
 -- MST textclock widget
-utc_clock = wibox.widget.textclock("[MST:%x %a %X] ", 1, "MST")
+utc_clock = wibox.widget.textclock("[UTC:%x %a %X] ", 1, "UTC")
 
 -- AUS textclock widget
 aus_clock = wibox.widget.textclock("[AUS:%x %a %X] ", 1, "Australia/Melbourne")
+
+
+local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
+local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
 
 
 -- Create a wibox for each screen and add it
@@ -228,7 +235,13 @@ awful.screen.connect_for_each_screen(function(s)
         {
            wibox.widget.systray(),
            layout = wibox.layout.fixed.horizontal,
-           wibox.widget.systray(),
+           cpu_widget({
+                 width = 70,
+                 step_width = 2,
+                 step_spacing = 0,
+                 color = t.purp
+           }),
+           ram_widget(),
            -- utc clock
            {
               utc_clock,
@@ -243,11 +256,19 @@ awful.screen.connect_for_each_screen(function(s)
               bg = t.grey,
               widget = wibox.container.background
            },
+           
+           -- canada clock
+           {
+              canada_clock,
+              fg = t.whit,
+              bg = t.purp,
+              widget = wibox.container.background
+           },
            -- aus clock
            {
               aus_clock,
               fg = t.whit,
-              bg = t.purp,
+              bg = t.grey,
               widget = wibox.container.background
            }
         }
@@ -265,14 +286,24 @@ root.buttons(awful.util.table.join(
 
 -- {{{ Key bindings
 globalkeys = awful.util.table.join(
-    awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
-              {description="show help", group="awesome"}),
+    --awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
+   --          {description="show help", group="awesome"}),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
               {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
+
+awful.key({}, "XF86AudioNext", function()
+      awful.util.spawn("sp next", false)
+end),
+awful.key({}, "XF86AudioPrev", function()
+      awful.util.spawn("sp prev", false)
+end),
+awful.key({}, "XF86AudioPlay", function()
+     awful.util.spawn("sp play", false)
+end),
 
     awful.key({ modkey,           }, "j",
         function ()
@@ -370,6 +401,7 @@ clientkeys = awful.util.table.join(
             c:raise()
         end,
         {description = "toggle fullscreen", group = "client"}),
+    awful.key({ modkey,           }, "s",      function (c) c.sticky = not c.sticky  end),
     awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
@@ -449,7 +481,7 @@ clientbuttons = awful.util.table.join(
     awful.button({ }, 1, function (c) client.focus = c; c:raise() end),
     awful.button({ modkey }, 1, awful.mouse.client.move),
     awful.button({ modkey }, 3, awful.mouse.client.resize))
-
+   
 -- Set keys
 root.keys(globalkeys)
 -- }}}
@@ -575,4 +607,3 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
-
