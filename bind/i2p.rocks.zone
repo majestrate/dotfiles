@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 ns2 (
-                     2021112105           ; Serial
+                     2022041000           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                           600           ; Expire  [1d]
@@ -34,6 +34,7 @@ _xmpp-client._tcp	IN	SRV	10 5 5222 i2p.rocks.
 ;_xmpp-server._tcp	IN	SRV	10 5 5269 xmpp.i2p.rocks.
 ;_xmpp-client._tcp	IN	SRV	10 5 5222 xmpp.i2p.rocks.
 mail6	IN	AAAA	200:3ff0:ad76:e386:5872:2295:22fd:fc58
+yggtracker  IN      AAAA  200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7
 ;y   IN  AAAA  203:e0b0:ec08:4e1f:f004:19a9:577a:90ba
 ;wiki IN CNAME dw68y1xhptqbhcm5s8aaaip6dbopykagig5q5u1za4c7pzxto77y.loki.
 ;exit	IN	A 51.79.57.234
