@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 ns2 (
-                     2022041000           ; Serial
+                     2022050800           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                           600           ; Expire  [1d]
@@ -15,12 +15,12 @@ default._domainkey      IN      TXT     ( "v=DKIM1; h=sha256; k=rsa; "
           "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtlrLHynPbLVWje2TqCX9EQrbdur7/wTU24O9Emi0Q27ebCIubBeHeeS75Dv0acqIkZqpZyog14TXP527LuQfu9d+eYyQ+VwHngqGgApi0FmR72jlc61uzBlt33ojtIiXOKWcVQ2tSmHyrD/uSRkptHg7y+eyHQtYBe6Y+n0p4oLSVJtK+AbKYzxCseO8ikKDH2slSou09/qsnG"
           "xlSuZa5xBjfWbWEep2dzl7Bf/pze5/PjOYpJMRa+DmRwxQ6LskgaUMY/GOM2XiBk4zudxrGU4tY5AnKBGHmN/UdDUwUUiHDUBKhddUj5hWss60gg9eKVG56t4tKS2QYBkOu5mfaQIDAQAB" )  ; ----- DKIM key default for i2p.rocks
 mail	IN	TXT	( "v=spf1 mx a:mail.i2p.rocks a:gha9cxqjzrbcu5dxnx7riomnitm94gkzxcghdmb1nogd5f9oj7oy.loki ip6:2a0a:c800:1:15:b00b::c -all" )
-ns1	IN	A	185.10.68.109
+ns1	IN	A	51.81.209.126
 ns2	IN	A	51.81.46.170
 dreg	IN	A	51.81.46.170
 mail	IN	A	51.81.46.170
 ;xmpp	IN	A	51.81.46.170
-omg-anime-tiddies  IN  A 51.81.46.170
+;;omg-anime-tiddies  IN  A 51.81.46.170
 opentracker	IN	A	51.81.46.170
 opentracker IN TXT ( "BITTORRENT UDP:6969 TCP:6969" )
 
@@ -39,9 +39,9 @@ yggtracker  IN      AAAA  200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7
 ;wiki IN CNAME dw68y1xhptqbhcm5s8aaaip6dbopykagig5q5u1za4c7pzxto77y.loki.
 ;exit	IN	A 51.79.57.234
 git IN A 51.81.46.170
-statusnet IN  A 127.0.0.1
-statusnet IN  AAAA ::1
-umu	IN	CNAME	sghti5du7hd4rxqaad7swioxxadwn88z5espg3rpy999egoxes5o.loki.
+;;statusnet IN  A 127.0.0.1
+;;statusnet IN  AAAA ::1
+;;umu	IN	CNAME	sghti5du7hd4rxqaad7swioxxadwn88z5espg3rpy999egoxes5o.loki.
 @	IN	A	65.108.59.77
 @	IN	TXT	( "v=spf1 a:mail.i2p.rocks -all" )
 ;mail  IN AAAA 2a0a:c800:1:15:b00b::c
