@@ -25,6 +25,7 @@ opentracker	IN	A	51.81.46.170
 opentracker IN TXT ( "BITTORRENT UDP:6969 TCP:6969" )
 
 jellyfin	IN	A	65.21.201.247
+jellyfin	IN	AAAA	201:a180:17f4:5278:d2bb:1b34:e50c:61d6
 
 _xmpp-server._tcp	IN	SRV	5 5 5269 sghti5du7hd4rxqaad7swioxxadwn88z5espg3rpy999egoxes5o.loki.
 _xmpp-client._tcp	IN	SRV	5 5 5222 sghti5du7hd4rxqaad7swioxxadwn88z5espg3rpy999egoxes5o.loki.
