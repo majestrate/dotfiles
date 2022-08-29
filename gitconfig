@@ -25,3 +25,5 @@
 	protocol = https
 [pull]
 	ff = only
+[tag]
+	gpgSign = true
