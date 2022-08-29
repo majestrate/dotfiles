@@ -1,19 +1,27 @@
 [user]
-	email = jeff@i2p.rocks
+	email = jeff@lokinet.io
 	name = Jeff Becker
-	signingkey = F357B3B42F6F9B05
+	signingkey = 2CE6F2743138825B7A7E521D025C02EE3A092F2D
 [color]
 	ui = auto
 [push]
 	default = simple
-
-[zeronet]
-	home = /home/jeff/git/ZeroNet
 [commit]
 	gpgsign = true
-[http "http://git.psi.i2p/"]
-	proxy = http://127.0.0.1:4444
-
-[http "http://yklo4bsbwi66r2wlbug5jrkpx6tlquo34knzaopsboiz5dnxn5rq.b32.i2p/"]
-	proxy = http://127.0.0.1:4444
-
+[core]
+	excludesFile = /home/jeff/.config/git/ignore
+	protectHFS = true
+	protectNTFS = true
+	editor = /usr/bin/nano
+	pager = /usr/bin/less
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = dev
+[hub]
+	protocol = https
+[pull]
+	ff = only
