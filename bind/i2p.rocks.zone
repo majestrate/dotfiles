@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 ns2 (
-                     2022062400           ; Serial
+                     2022092102           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                           600           ; Expire  [1d]
@@ -25,7 +25,7 @@ opentracker	IN	A	51.81.46.170
 opentracker IN TXT ( "BITTORRENT UDP:6969 TCP:6969" )
 
 jellyfin	IN	A	65.21.201.247
-jellyfin	IN	AAAA	201:a180:17f4:5278:d2bb:1b34:e50c:61d6
+;;jellyfin	IN	AAAA	201:a180:17f4:5278:d2bb:1b34:e50c:61d6
 
 _xmpp-server._tcp	IN	SRV	5 5 5269 sghti5du7hd4rxqaad7swioxxadwn88z5espg3rpy999egoxes5o.loki.
 _xmpp-client._tcp	IN	SRV	5 5 5222 sghti5du7hd4rxqaad7swioxxadwn88z5espg3rpy999egoxes5o.loki.
@@ -41,7 +41,7 @@ yggtracker  IN      AAAA  200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7
 ;y   IN  AAAA  203:e0b0:ec08:4e1f:f004:19a9:577a:90ba
 ;wiki IN CNAME dw68y1xhptqbhcm5s8aaaip6dbopykagig5q5u1za4c7pzxto77y.loki.
 ;exit	IN	A 51.79.57.234
-git IN A 51.81.46.170
+;;git IN A 51.81.46.170
 ;;statusnet IN  A 127.0.0.1
 ;;statusnet IN  AAAA ::1
 ;;umu	IN	CNAME	sghti5du7hd4rxqaad7swioxxadwn88z5espg3rpy999egoxes5o.loki.
