@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 ns2 (
-                     2022111900           ; Serial
+                     2022111901           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                           600           ; Expire  [1d]
@@ -8,7 +8,6 @@ $TTL    3600
 ;
 	IN	NS	ns1.i2p.rocks.
 	IN	NS	ns2.i2p.rocks.
-  IN  MX  10 zhrxg3kuc59g85k9xrih71t9tn7dp7ysd7bfgzfww1dnqcirq75y.loki.
 	IN	MX	20 mx.lokinet.io.
 
 ;default._domainkey      IN      TXT     ( "v=DKIM1; h=sha256; k=rsa; "
