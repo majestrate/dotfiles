@@ -1,26 +1,34 @@
-$TTL    3600
-@       IN      SOA     ns1 ns2 (
-                     2022112002           ; Serial
-                         3600           ; Refresh [1h]
-                          600           ; Retry   [10m]
-                          600           ; Expire  [1d]
-                          600 )         ; Negative Cache TTL [1h]
+$TTL	3600
+@	IN	SOA	ns1 ns2 (
+    2022112601 ; Serial
+    3600 ; Refresh [1h]
+    600 ; Retry [10m]
+    600 ; Expire [1d]
+    600 ; Negative Cache TTL [1h]
+)
+; NS records
+    IN  NS  ns1.lokinet.io.
+    IN  NS  ns2.lokinet.io.
 ;
-	IN	NS	ns1.lokinet.io.
-	IN	NS	ns2.lokinet.io.
-	IN	MX	20 mx.lokinet.io.
-default._domainkey      IN      TXT     ( "v=DKIM1; h=sha256; k=rsa; "
-          "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtlrLHynPbLVWje2TqCX9EQrbdur7/wTU24O9Emi0Q27ebCIubBeHeeS75Dv0acqIkZqpZyog14TXP527LuQfu9d+eYyQ+VwHngqGgApi0FmR72jlc61uzBlt33ojtIiXOKWcVQ2tSmHyrD/uSRkptHg7y+eyHQtYBe6Y+n0p4oLSVJtK+AbKYzxCseO8ikKDH2slSou09/qsnG"
-          "xlSuZa5xBjfWbWEep2dzl7Bf/pze5/PjOYpJMRa+DmRwxQ6LskgaUMY/GOM2XiBk4zudxrGU4tY5AnKBGHmN/UdDUwUUiHDUBKhddUj5hWss60gg9eKVG56t4tKS2QYBkOu5mfaQIDAQAB" )  ; ----- DKIM key default for mx.lokinet.io
-mx	IN	TXT	( "v=spf1 mx a:mx.lokinet.io -all" )
-ns1	IN	A	51.81.209.126
-ns2	IN	A   23.137.251.45
-mx  IN  A   135.148.44.188
-git IN	A   65.108.59.77
-_xmpp-server._tcp	IN	SRV	5 5 5269 sghti5du7hd4rxqaad7swioxxadwn88z5espg3rpy999egoxes5o.loki.
-_xmpp-client._tcp	IN	SRV	5 5 5222 sghti5du7hd4rxqaad7swioxxadwn88z5espg3rpy999egoxes5o.loki.
-_xmpp-server._tcp	IN	SRV	10 5 5269 lokinet.io.
-_xmpp-client._tcp	IN	SRV	10 5 5222 lokinet.io.
-
-@	IN	A 65.108.59.77
-@	IN	TXT	( "v=spf1 a:mx.lokinet.io -all" )
+; mail
+    IN  MX  20 mx.lokinet.io.
+default._domainkey  IN  TXT ( "v=DKIM1; h=sha256; k=rsa; "
+  "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtlrLHynPbLVWje2TqCX9EQrbdur7/wTU24O9Emi0Q27ebCIubBeHeeS75Dv0acqIkZqpZyog14TXP527LuQfu9d+eYyQ+VwHngqGgApi0FmR72jlc61uzBlt33ojtIiXOKWcVQ2tSmHyrD/uSRkptHg7y+eyHQtYBe6Y+n0p4oLSVJtK+AbKYzxCseO8ikKDH2slSou09/qsnG"
+  "xlSuZa5xBjfWbWEep2dzl7Bf/pze5/PjOYpJMRa+DmRwxQ6LskgaUMY/GOM2XiBk4zudxrGU4tY5AnKBGHmN/UdDUwUUiHDUBKhddUj5hWss60gg9eKVG56t4tKS2QYBkOu5mfaQIDAQAB" )
+mx   IN TXT  ( "v=spf1 mx a:mx.lokinet.io -all" )
+@  IN  TXT ( "v=spf1 a:mx.lokinet.io -all" )
+;
+; A records
+ns1  IN  A   51.81.209.126
+ns2  IN  A   23.137.251.45
+mx   IN  A   135.148.44.188
+git  IN  A   65.108.59.77
+sogs IN  A   65.108.59.77
+irc  IN  A   65.108.59.77
+@    IN  A   65.108.59.77
+;
+; SRV records
+_xmpp-server._tcp   IN  SRV  5 5 5269 sghti5du7hd4rxqaad7swioxxadwn88z5espg3rpy999egoxes5o.loki.
+_xmpp-client._tcp   IN  SRV  5 5 5222 sghti5du7hd4rxqaad7swioxxadwn88z5espg3rpy999egoxes5o.loki.
+_xmpp-server._tcp   IN  SRV  10 5 5269 lokinet.io.
+_xmpp-client._tcp   IN  SRV  10 5 5222 lokinet.io.
