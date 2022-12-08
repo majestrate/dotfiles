@@ -1,6 +1,6 @@
 $TTL	3600
 @	IN	SOA	ns1 ns2 (
-    2022112601 ; Serial
+    2022120702 ; Serial
     3600 ; Refresh [1h]
     600 ; Retry [10m]
     600 ; Expire [1d]
@@ -26,9 +26,16 @@ git  IN  A   65.108.59.77
 sogs IN  A   65.108.59.77
 irc  IN  A   65.108.59.77
 @    IN  A   65.108.59.77
+
+; AAAA records
+
+ygg-mirror  IN  AAAA 203:3128:20af:6ba:36b4:bc9:def8:915d
+
 ;
 ; SRV records
 _xmpp-server._tcp   IN  SRV  5 5 5269 sghti5du7hd4rxqaad7swioxxadwn88z5espg3rpy999egoxes5o.loki.
 _xmpp-client._tcp   IN  SRV  5 5 5222 sghti5du7hd4rxqaad7swioxxadwn88z5espg3rpy999egoxes5o.loki.
 _xmpp-server._tcp   IN  SRV  10 5 5269 lokinet.io.
 _xmpp-client._tcp   IN  SRV  10 5 5222 lokinet.io.
+
+_http._tcp.mirror      IN SRV   1 5 80 ygg-mirror.lokinet.io.
