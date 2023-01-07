@@ -1,6 +1,6 @@
 $TTL	3600
 @	IN	SOA	ns1 ns2 (
-    2023010702 ; Serial
+    2023010703 ; Serial
     3600 ; Refresh [1h]
     600 ; Retry [10m]
     600 ; Expire [1d]
@@ -20,9 +20,9 @@ mx   IN TXT  ( "v=spf1 mx a:mx.lokinet.io -all" )
 
 
 ;; send grid
-em3551 IN  CNAME     u31548559.wl060.sendgrid.net
-s1._domainkey        IN CNAME s1.domainkey.u31548559.wl060.sendgrid.net
-s2._domainkey        IN CNAME s2.domainkey.u31548559.wl060.sendgrid.net
+em3551 IN  CNAME     u31548559.wl060.sendgrid.net.
+s1._domainkey        IN CNAME s1.domainkey.u31548559.wl060.sendgrid.net.
+s2._domainkey        IN CNAME s2.domainkey.u31548559.wl060.sendgrid.net.
 
 ;
 ; A records
