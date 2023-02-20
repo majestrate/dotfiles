@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 ns2 (
-                     2023010700           ; Serial
+                     2023021900           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                           600           ; Expire  [1d]
@@ -20,8 +20,9 @@ ns2	IN	A	 23.137.251.45
 ;mail	IN	A	51.81.46.170
 ;xmpp	IN	A	51.81.46.170
 ;;omg-anime-tiddies  IN  A 51.81.46.170
+
 opentracker	IN	A	23.137.251.45
-opentracker IN TXT ( "BITTORRENT UDP:6969 TCP:6969" )
+;;opentracker IN TXT ( "BITTORRENT UDP:6969 TCP:6969" )
 
 jellyfin	IN	A	23.137.251.45
 ;;jellyfin IN HTTPS "alpn=h3,h3-29,h2; ipv4hint=65.21.201.247"
