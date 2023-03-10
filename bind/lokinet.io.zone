@@ -1,6 +1,6 @@
 $TTL	3600
 @	IN	SOA	ns1 ns2 (
-    2023022800 ; Serial
+    2023031003 ; Serial
     3600 ; Refresh [1h]
     600 ; Retry [10m]
     600 ; Expire [1d]
@@ -18,12 +18,6 @@ default._domainkey  IN  TXT ( "v=DKIM1; h=sha256; k=rsa; "
   "xlSuZa5xBjfWbWEep2dzl7Bf/pze5/PjOYpJMRa+DmRwxQ6LskgaUMY/GOM2XiBk4zudxrGU4tY5AnKBGHmN/UdDUwUUiHDUBKhddUj5hWss60gg9eKVG56t4tKS2QYBkOu5mfaQIDAQAB")
 mx   IN TXT  ( "v=spf1 mx a:mx.lokinet.io -all" )
 @  IN  TXT ( "v=spf1 a:mx.lokinet.io -all" )
-
-
-;; send grid
-em3551 IN  CNAME     u31548559.wl060.sendgrid.net.
-s1._domainkey        IN CNAME s1.domainkey.u31548559.wl060.sendgrid.net.
-s2._domainkey        IN CNAME s2.domainkey.u31548559.wl060.sendgrid.net.
 
 ;
 ; A records
@@ -46,3 +40,6 @@ _xmpp-server._tcp   IN  SRV  5 5 5269 sghti5du7hd4rxqaad7swioxxadwn88z5espg3rpy9
 _xmpp-client._tcp   IN  SRV  5 5 5222 sghti5du7hd4rxqaad7swioxxadwn88z5espg3rpy999egoxes5o.loki.
 _xmpp-server._tcp   IN  SRV  10 5 5269 lokinet.io.
 _xmpp-client._tcp   IN  SRV  10 5 5222 lokinet.io.
+
+_http._tcp.mirror   IN  SRV  10 5 80   ygg-mirror.lokinet.io.
+_http._tcp.mirror   IN  SRV  20 5 80   mirror.loki.
