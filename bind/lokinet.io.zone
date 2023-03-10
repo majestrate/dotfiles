@@ -1,6 +1,6 @@
 $TTL	3600
 @	IN	SOA	ns1 ns2 (
-    2023031006 ; Serial
+    2023031007 ; Serial
     3600 ; Refresh [1h]
     600 ; Retry [10m]
     600 ; Expire [1d]
@@ -45,5 +45,5 @@ _xmpp-client._tcp   IN  SRV  10 5 5222 lokinet.io.
 
 
 mirror IN  AAAA 203:3128:20af:6ba:36b4:bc9:def8:915d
-_http._tcp.mirror IN  SRV  10 5 80   mirror.lokinet.io.
+_http._tcp.mirror IN  SRV  10 5 80   mirror
 
