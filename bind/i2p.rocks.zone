@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 ns2 (
-                     2023021900           ; Serial
+                     2023031000           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                           600           ; Expire  [1d]
