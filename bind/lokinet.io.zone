@@ -1,6 +1,6 @@
 $TTL	3600
 @	IN	SOA	ns1 ns2 (
-    2023041301 ; Serial
+    2023042300 ; Serial
     3600 ; Refresh [1h]
     600 ; Retry [10m]
     600 ; Expire [1d]
@@ -35,10 +35,10 @@ ygg-mirror  IN  AAAA 203:3128:20af:6ba:36b4:bc9:def8:915d
 mx        IN  AAAA 2604:2dc0:101:200:0:0:0:f17
 ;
 ; SRV records
-_xmpp-server._tcp   IN  SRV  5 5 15269 probably.loki.
-_xmpp-client._tcp   IN  SRV  5 5 15222 probably.loki.
-_xmpp-server._tcp   IN  SRV  10 5 15269 lokinet.io.
-_xmpp-client._tcp   IN  SRV  10 5 15222 lokinet.io.
+_xmpp-server._tcp   IN  SRV  5 5 5269 probably.loki.
+_xmpp-client._tcp   IN  SRV  5 5 5222 probably.loki.
+_xmpp-server._tcp   IN  SRV  10 5 5269 lokinet.io.
+_xmpp-client._tcp   IN  SRV  10 5 5222 lokinet.io.
 
 
 
