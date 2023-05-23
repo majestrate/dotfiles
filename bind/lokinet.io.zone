@@ -1,6 +1,6 @@
 $TTL	3600
 @	IN	SOA	ns1 ns2 (
-    2023042300 ; Serial
+    2023052302 ; Serial
     3600 ; Refresh [1h]
     600 ; Retry [10m]
     600 ; Expire [1d]
@@ -11,8 +11,10 @@ $TTL	3600
     IN  NS  ns2.lokinet.io.
 ;
 ; mail
-    IN  MX  20 mx.lokinet.io.
-    
+    IN  MX  10 mx.lokinet.io.
+
+;;    IN  MX  20 mx1.llarp.net.
+
 default._domainkey  IN  TXT ( "v=DKIM1; h=sha256; k=rsa; "
   "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtlrLHynPbLVWje2TqCX9EQrbdur7/wTU24O9Emi0Q27ebCIubBeHeeS75Dv0acqIkZqpZyog14TXP527LuQfu9d+eYyQ+VwHngqGgApi0FmR72jlc61uzBlt33ojtIiXOKWcVQ2tSmHyrD/uSRkptHg7y+eyHQtYBe6Y+n0p4oLSVJtK+AbKYzxCseO8ikKDH2slSou09/qsnG"
   "xlSuZa5xBjfWbWEep2dzl7Bf/pze5/PjOYpJMRa+DmRwxQ6LskgaUMY/GOM2XiBk4zudxrGU4tY5AnKBGHmN/UdDUwUUiHDUBKhddUj5hWss60gg9eKVG56t4tKS2QYBkOu5mfaQIDAQAB")
@@ -27,22 +29,25 @@ mx   IN  A   135.148.44.188
 git  IN  A   102.223.180.74
 irc  IN  A   102.223.180.74
 jellyfin  IN  A   102.223.180.74
+apub      IN  A   102.223.180.235
 @    IN  A   102.223.180.74
 
 ; AAAA records
 
 ygg-mirror  IN  AAAA 203:3128:20af:6ba:36b4:bc9:def8:915d
 mx        IN  AAAA 2604:2dc0:101:200:0:0:0:f17
-;
+
+; CNAME records
+mirror IN  CNAME ygg-mirror.lokinet.io.
+
 ; SRV records
-_xmpp-server._tcp   IN  SRV  5 5 5269 probably.loki.
-_xmpp-client._tcp   IN  SRV  5 5 5222 probably.loki.
-_xmpp-server._tcp   IN  SRV  10 5 5269 lokinet.io.
-_xmpp-client._tcp   IN  SRV  10 5 5222 lokinet.io.
+_xmpp-server._tcp   IN  SRV  10 1 5269 probably.loki.
+_xmpp-client._tcp   IN  SRV  10 1 5222 probably.loki.
+_xmpp-server._tcp   IN  SRV  20 1 5269 lokinet.io.
+_xmpp-client._tcp   IN  SRV  20 1 5222 lokinet.io.
+
+_http._tcp.mirror IN  SRV  10 1 80 mirror.lokinet.io.
+_http._tcp.mirror IN  SRV  20 1 80 mirror.loki.
 
 
-
-
-mirror IN  AAAA 203:3128:20af:6ba:36b4:bc9:def8:915d
-_http._tcp.mirror IN  SRV  10 5 80   mirror
 
