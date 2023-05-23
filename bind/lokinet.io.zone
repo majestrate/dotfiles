@@ -1,6 +1,6 @@
 $TTL	3600
 @	IN	SOA	ns1 ns2 (
-    2023052302 ; Serial
+    2023052305 ; Serial
     3600 ; Refresh [1h]
     600 ; Retry [10m]
     600 ; Expire [1d]
@@ -12,8 +12,6 @@ $TTL	3600
 ;
 ; mail
     IN  MX  10 mx.lokinet.io.
-
-;;    IN  MX  20 mx1.llarp.net.
 
 default._domainkey  IN  TXT ( "v=DKIM1; h=sha256; k=rsa; "
   "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtlrLHynPbLVWje2TqCX9EQrbdur7/wTU24O9Emi0Q27ebCIubBeHeeS75Dv0acqIkZqpZyog14TXP527LuQfu9d+eYyQ+VwHngqGgApi0FmR72jlc61uzBlt33ojtIiXOKWcVQ2tSmHyrD/uSRkptHg7y+eyHQtYBe6Y+n0p4oLSVJtK+AbKYzxCseO8ikKDH2slSou09/qsnG"
@@ -48,6 +46,3 @@ _xmpp-client._tcp   IN  SRV  20 1 5222 lokinet.io.
 
 _http._tcp.mirror IN  SRV  10 1 80 mirror.lokinet.io.
 _http._tcp.mirror IN  SRV  20 1 80 mirror.loki.
-
-
-
