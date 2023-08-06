@@ -1,2 +1,0 @@
-startup.interface.socket /home/jeff/.tor/control.sock
-startup.dataDirectory /home/jeff/.arm

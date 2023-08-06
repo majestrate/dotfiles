@@ -1,6 +1,0 @@
-ClientOnly 1
-SOCKSPort 9050 IsolateDestAddr IsolateDestPort
-ControlSocket /home/jeff/.tor/control.sock
-RunAsDaemon 1
-DisableDebuggerAttachment 0
-SafeLogging 0

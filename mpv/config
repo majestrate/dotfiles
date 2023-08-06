@@ -1,5 +1,3 @@
-vo=wayland,vdpau
-ao=jack,pulse
 
 alang=jp,jpn,Japanese,en,eng,English
 slang=jp,jng,Japanese,en,eng,English

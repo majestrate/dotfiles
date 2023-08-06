@@ -1,7 +1,0 @@
-#!/bin/bash -e
-# redirect
-exec 1>&2
-
-go fmt ./...
-go test ./...
-echo "we gud"

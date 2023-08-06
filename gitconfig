@@ -1,29 +1,29 @@
 [user]
-	email = jeff@lokinet.io
-	name = Jeff Becker
-	signingkey = 2CE6F2743138825B7A7E521D025C02EE3A092F2D
+    email = jeff@lokinet.io
+    name = Jeff Becker
+    signingkey = 2CE6F2743138825B7A7E521D025C02EE3A092F2D
 [color]
-	ui = auto
+        ui = auto
 [push]
-	default = simple
+        default = simple
 [commit]
-	gpgsign = true
+        gpgsign = true
 [core]
-	excludesFile = /home/jeff/.config/git/ignore
-	protectHFS = true
-	protectNTFS = true
-	editor = /usr/bin/nano
-	pager = /usr/bin/less
+        protectHFS = true
+        protectNTFS = true
+        editor = /usr/bin/nano
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+        required = true
 [init]
-	defaultBranch = dev
+        defaultBranch = dev
 [hub]
-	protocol = https
+        protocol = https
 [pull]
-	ff = only
+        ff = only
 [tag]
-	gpgSign = true
+        gpgSign = true
+[protocol "file"]
+        allow = always
