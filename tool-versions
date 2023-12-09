@@ -1,26 +1,18 @@
+jq latest
 rust nightly
-flutter 3.13.8-stable
-cmake system
+cmake latest
 dotnet-core 7.0.402
-
-python system
-pipx 1.2.1
-
-bazel 6.1.2
-
-golang 1.21.4
-meson 1.3.0
-
+python latest
+pipx latest
+bazel latest
+golang latest
+meson latest
 elixir 1.15
 erlang 26.1.1
-nodejs 20.8.1
-
-ruby 3.2.2
-
-yt-dlp 2023.11.16
-nano 7.2
-jq 1.7
-
+nodejs latest
+ruby latest
+yt-dlp latest
+nano latest
 java openjdk-21
-
-haskell 9.8.1
+haskell latest
+flutter 3.13.8-stable
