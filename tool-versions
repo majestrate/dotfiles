@@ -1,8 +1,26 @@
-nodejs 18.16.1
 rust nightly
-flutter 3.10.0
+flutter 3.13.8-stable
 cmake system
-dotnet-core 6.0.100
+dotnet-core 7.0.402
+
 python system
-golang 1.20.7
-meson 1.2.0
+pipx 1.2.1
+
+bazel 6.1.2
+
+golang 1.21.4
+meson 1.3.0
+
+elixir 1.15
+erlang 26.1.1
+nodejs 20.8.1
+
+ruby 3.2.2
+
+yt-dlp 2023.11.16
+nano 7.2
+jq 1.7
+
+java openjdk-21
+
+haskell 9.8.1
