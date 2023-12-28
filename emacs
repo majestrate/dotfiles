@@ -7,7 +7,7 @@
 (global-unset-key "\M-w")
 (global-set-key "\C-e" 'kill)
 
-;; base appearance 
+;; base appearance
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
@@ -125,7 +125,8 @@
   :ensure t)
 (add-hook 'markdown-mode-hook
           (lambda () (markdown-preview-eww)))
-
+(use-package yaml-mode
+  :ensure t)
 
 ;; appearance
 (use-package all-the-icons
