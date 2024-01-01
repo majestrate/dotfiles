@@ -30,14 +30,14 @@
 
 (setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
 (setq dashboard-items '((recents  . 5)
-                        (bookmarks . 5)
-                        (projects . 5)))
+                        (bookmarks . 5)))
 (setq dashboard-banner-logo-title "Emacs")
 (setq dashboard-startup-banner "~/.emacs.d/banner.png")
 (setq dashboard-center-content t)
 (setq dashboard-icon-type 'all-the-icons)
 (setq dashboard-set-heading-icons t)
 (setq dashboard-set-file-icons t)
+(dashboard-open)
 
 ;; completion
 (use-package helm
