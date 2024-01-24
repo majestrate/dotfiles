@@ -1,6 +1,6 @@
 $TTL    3600
 @       IN      SOA     ns1 ns2 (
-                     2023100602           ; Serial
+                     2024012401           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                           600           ; Expire  [1d]
@@ -14,7 +14,7 @@ ns2	IN	A	23.184.48.86
 ns1	IN	A	23.137.251.45
 
 
-opentracker	IN	A    102.223.180.235
+opentracker	IN	A 23.137.251.46
 opentracker IN TXT ( "BITTORRENT UDP:6969" )
 
 
