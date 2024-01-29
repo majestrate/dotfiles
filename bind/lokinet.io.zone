@@ -1,6 +1,6 @@
 $TTL	3600
 @	IN	SOA	ns1 ns2 (
-    2024012900 ; Serial
+    2024012901 ; Serial
     3600 ; Refresh [1h]
     600 ; Retry [10m]
     600 ; Expire [1d]
@@ -42,7 +42,7 @@ mirror IN  CNAME ygg-mirror.lokinet.io.
 ;;_xmpp-client._tcp   IN  SRV  20 2 5222 lokinet.io.
 _xmpps-client._tcp   IN  SRV  10 1 5223 lokinet.io.
 _xmpps-server._tcp   IN  SRV  10 1 5279 lokinet.io.
-;;_xmpp-server._tcp   IN  SRV  20 2 5269 lokinet.io.
 
-_http._tcp.mirror IN  SRV  10 1 80 mirror.lokinet.io.
-_http._tcp.mirror IN  SRV  20 1 80 mirror.loki.
+;;_xmpp-server._tcp   IN  SRV  20 2 5269 lokinet.io.
+;;_http._tcp.mirror IN  SRV  10 1 80 mirror.lokinet.io.
+;;_http._tcp.mirror IN  SRV  20 1 80 mirror.loki.
