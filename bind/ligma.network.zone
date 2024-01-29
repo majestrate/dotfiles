@@ -1,0 +1,44 @@
+$TTL	3600
+@	IN	SOA	ns1 ns2 (
+    2024012900 ; Serial
+    3600 ; Refresh [1h]
+    600 ; Retry [10m]
+    600 ; Expire [1d]
+    600 ; Negative Cache TTL [1h]
+)
+; NS records
+    IN  NS  ns1.limga.network.
+    IN  NS  ns2.ligma.network.
+;
+; mail
+    IN  MX  10 mx.lokinet.io.
+
+default._domainkey  IN  TXT ( "v=DKIM1; h=sha256; k=rsa; "
+  "p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtlrLHynPbLVWje2TqCX9EQrbdur7/wTU24O9Emi0Q27ebCIubBeHeeS75Dv0acqIkZqpZyog14TXP527LuQfu9d+eYyQ+VwHngqGgApi0FmR72jlc61uzBlt33ojtIiXOKWcVQ2tSmHyrD/uSRkptHg7y+eyHQtYBe6Y+n0p4oLSVJtK+AbKYzxCseO8ikKDH2slSou09/qsnG"
+  "xlSuZa5xBjfWbWEep2dzl7Bf/pze5/PjOYpJMRa+DmRwxQ6LskgaUMY/GOM2XiBk4zudxrGU4tY5AnKBGHmN/UdDUwUUiHDUBKhddUj5hWss60gg9eKVG56t4tKS2QYBkOu5mfaQIDAQAB")
+mx   IN TXT  ( "v=spf1 mx a:mx.lokinet.io -all" )
+@  IN  TXT ( "v=spf1 a:mx.lokinet.io -all" )
+
+;
+; nameservers
+;ns2  IN  A   23.184.48.86
+;ns1  IN  A   23.137.251.45
+
+ns1  IN  CNAME	incog-us
+ns2  IN  CNAME	incog-nl
+
+; infra
+@    IN  CNAME   incog-nl
+
+; public boxes
+incog-nl IN	 A	23.137.251.45
+incog-nl IN	 A	23.137.251.46
+incog-us IN	 A	23.184.48.86
+buyvm 	 IN	 A	198.98.60.169
+ovh			 IN	 A	135.148.44.188
+ovh			 IN	 AAAA	2604:2dc0:101:200::f17
+
+; internal network
+
+desu IN	 AAAA	204:ac6c:6d7e:82e3:fa57:2e6e:c00b:e4f1
+wankmaster IN	 AAAA	200:f51f:7119:c566:5211:6f6b:6571:bce7
