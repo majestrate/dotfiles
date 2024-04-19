@@ -21,11 +21,9 @@
 (package-install 'use-package)
 (require 'use-package)
 
-
 ;; dashboard
 (use-package dashboard
   :ensure t
-  :requires all-the-icons
   :config (dashboard-setup-startup-hook))
 
 (setq initial-buffer-choice (lambda () (get-buffer-create "*dashboard*")))
@@ -34,10 +32,9 @@
 (setq dashboard-banner-logo-title "Emacs")
 (setq dashboard-startup-banner "~/.emacs.d/banner.png")
 (setq dashboard-center-content t)
-(setq dashboard-icon-type 'all-the-icons)
+(setq dashboard-display-icons-p t) 
 (setq dashboard-set-heading-icons t)
 (setq dashboard-set-file-icons t)
-(dashboard-open)
 
 ;; completion
 (use-package helm
@@ -57,6 +54,8 @@
 (setq read-file-name-completion-ignore-case t)
 
 (use-package company
+  :ensure t)
+(use-package helm-company
   :ensure t)
 (setq company-tooltip-align-annotations t)
 (setq company-tooltip-annotation-padding 1)
@@ -80,7 +79,6 @@
   :ensure t
   :requires helm)
 (define-key lsp-mode-map [remap xref-find-apropos] #'helm-lsp-workspace-symbol)
-
 (use-package lsp-java
   :ensure t
   :hook ((java-mode . lsp)))
@@ -102,7 +100,6 @@
   :ensure t)
 (use-package msvc
   :ensure t)
-
 (add-hook 'c++-mode-hook
           (lambda()
             (lsp)
@@ -111,6 +108,20 @@
           (lambda()
             (lsp)
             (company-mode)))
+
+
+(use-package rust-mode
+  :ensure t)
+
+;; gleam
+(use-package tree-sitter
+  :ensure t)
+(use-package tree-sitter-indent
+  :requires tree-sitter
+  :ensure t)
+(use-package gleam-mode
+  :requires tree-sitter-indent
+  :load-path "~/git/gleam-mode")
 
 ;; others
 (use-package meson-mode
@@ -128,16 +139,6 @@
 (use-package yaml-mode
   :ensure t)
 
-;; appearance
-(use-package all-the-icons
-  :ensure t)
-(use-package all-the-icons-completion
-  :ensure t
-  :config (all-the-icons-completion-mode))
-(use-package helm-icons
-  :ensure t
-  :requires helm)
-
 ;; code style
 (setq-default c-default-style "bsd")
 (setq-default c-basic-offset 2)
@@ -145,15 +146,17 @@
 (setq-default indent-tabs-mode nil)
 
 
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(material-light))
+ '(custom-enabled-themes '(leuven))
  '(custom-safe-themes
    '("f149d9986497e8877e0bd1981d1bef8c8a6d35be7d82cba193ad7e46f0989f6a" default))
- '(package-selected-packages '(ivy use-package helm)))
+ '(package-selected-packages
+   '(rust-mode gleam-mode company-nginx helm-tree-sitter tree-sitter-indent tree-sitter-langs ivy use-package helm)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
