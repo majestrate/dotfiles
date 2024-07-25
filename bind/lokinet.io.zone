@@ -1,6 +1,6 @@
 $TTL	3600
 @	IN	SOA	ns1 ns2 (
-    2024012901 ; Serial
+    2024012902 ; Serial
     3600 ; Refresh [1h]
     600 ; Retry [10m]
     600 ; Expire [1d]
@@ -22,7 +22,7 @@ mx   IN TXT  ( "v=spf1 mx a:mx.lokinet.io -all" )
 ;
 ; A records
 ns2  IN  A   23.184.48.86
-ns1  IN  A   23.137.251.45
+ns1  IN  A   135.148.44.188
 mx   IN  A   135.148.44.188
 git  IN  A   23.184.48.86
 irc  IN  A   23.184.48.86
