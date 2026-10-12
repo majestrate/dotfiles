@@ -1,6 +1,6 @@
 $TTL	3600
 @	IN	SOA	ns1 ns2 (
-    2024012909 ; Serial
+    2026101218 ; Serial
     3600 ; Refresh [1h]
     600 ; Retry [10m]
     600 ; Expire [1d]
@@ -25,19 +25,18 @@ ns2  IN  A   23.184.48.86
 ns1  IN  A   135.148.44.188
 
 ; public boxes
-incog-nl IN	 A	23.137.251.45
-incog-nl IN	 A	23.137.251.46
 incog-us IN	 A	23.184.48.86
 buyvm 	 IN	 A	198.98.60.169
+hetzner  IN      A      178.156.185.109
 ovh			 IN	 A	135.148.44.188
 ovh			 IN	 AAAA	2604:2dc0:101:200::f17
+hetzner			 IN	 AAAA	2a01:4ff:f0:7f9b::1
 
 ; infra
-@ IN A 23.137.251.45
+@ IN A 23.184.48.86
 
 ; internal network
 desu IN	 AAAA	204:ac6c:6d7e:82e3:fa57:2e6e:c00b:e4f1
-wankmaster IN	 AAAA	200:f51f:7119:c566:5211:6f6b:6571:bce7
 ;; yggdrasil public peers
-y.incog-us IN AAAA 203:86e6:fdb8:96f8:96d1:6e17:3926:4683
-y.incog-nl IN AAAA 200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7
+;; y.incog-us IN AAAA 203:86e6:fdb8:96f8:96d1:6e17:3926:4683
+;; y.incog-nl IN AAAA 200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7
