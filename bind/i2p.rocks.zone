@@ -1,17 +1,17 @@
 $TTL    3600
 @       IN      SOA     ns1 ns2 (
-                     2024040601           ; Serial
+                     2024040602           ; Serial
                          3600           ; Refresh [1h]
                           600           ; Retry   [10m]
                           600           ; Expire  [1d]
-                          600 )         ; Negative Cache TTL [1h]
+                          3600 )         ; Negative Cache TTL [1h]
 ;
 	IN	NS	ns1.i2p.rocks.
 	IN	NS	ns2.i2p.rocks.
 	IN	MX	20 mx.lokinet.io.
 
-ns2	IN	A	23.184.48.86
-ns1	IN	A	135.148.44.188
+ns1	IN	A	23.184.48.86
+ns2	IN	A	135.148.44.188
 
 
 ;opentracker	IN	A 23.137.251.46
