@@ -1,10 +1,10 @@
 $TTL	3600
 @	IN	SOA	ns1 ns2 (
-    2026101219 ; Serial
+    2026103110 ; Serial
     3600 ; Refresh [1h]
     600 ; Retry [10m]
-    600 ; Expire [1d]
-    600 ; Negative Cache TTL [1h]
+    600 ; Expire [10m]
+    600 ; Negative Cache TTL [10m]
 )
 ; NS records
     IN  NS  ns1.limga.network.
@@ -25,18 +25,24 @@ ns1  IN  A   135.148.44.188
 ns2  IN  A   23.184.48.86
 
 ; public boxes
-incog-us IN	 A	23.184.48.86
-buyvm 	 IN	 A	198.98.60.169
-hetzner  IN      A      178.156.185.109
-ovh			 IN	 A	135.148.44.188
-ovh			 IN	 AAAA	2604:2dc0:101:200::f17
-hetzner			 IN	 AAAA	2a01:4ff:f0:7f9b::1
+incog	IN	A	23.184.48.86
+buyvm	IN	A	198.98.60.169
+hetzner IN	A	178.156.185.109
+ovh	IN	A	135.148.44.188
+
+; ovh			 IN	 AAAA	2604:2dc0:101:200::f17
+; hetzner			 IN	 AAAA	2a01:4ff:f0:7f9b::1
+
+incog	IN	AAAA	203:86e6:fdb8:96f8:96d1:6e17:3926:4683
+buyvm	IN	AAAA	202:f827:5e04:cf3d:d6db:d902:afb1:b2ed
+hetzner	IN	AAAA	201:7dc0:1389:b8b3:666c:a06b:481f:bb39
+ovh	IN	AAAA	201:f5bf:3d9d:2687:2895:1569:9566:eab9
 
 ; infra
 @ IN A 23.184.48.86
 
 ; internal network
-desu IN	 AAAA	204:ac6c:6d7e:82e3:fa57:2e6e:c00b:e4f1
+desu	IN	AAAA	204:ac6c:6d7e:82e3:fa57:2e6e:c00b:e4f1
 ;; yggdrasil public peers
 ;; y.incog-us IN AAAA 203:86e6:fdb8:96f8:96d1:6e17:3926:4683
 ;; y.incog-nl IN AAAA 200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7
