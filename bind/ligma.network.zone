@@ -1,6 +1,6 @@
 $TTL	3600
 @	IN	SOA	ns1 ns2 (
-    2026103110 ; Serial
+    2026111507 ; Serial
     3600 ; Refresh [1h]
     600 ; Retry [10m]
     600 ; Expire [10m]
@@ -43,6 +43,8 @@ ovh	IN	AAAA	201:f5bf:3d9d:2687:2895:1569:9566:eab9
 
 ; internal network
 desu	IN	AAAA	204:ac6c:6d7e:82e3:fa57:2e6e:c00b:e4f1
-;; yggdrasil public peers
-;; y.incog-us IN AAAA 203:86e6:fdb8:96f8:96d1:6e17:3926:4683
-;; y.incog-nl IN AAAA 200:1e2f:e608:eb3a:2bf:1e62:87ba:e2f7
+swiss	IN	AAAA	201:1b43:d34d:19b9:d5ee:af59:617b:dab3
+qui	IN	AAAA	200:5ae8:db16:869e:78c4:fbe6:4d60:5246
+irc	IN	AAAA	203:b00a:1684:860d:880f:ea9c:92dc:fabb
+magicka	IN	AAAA	203:8ac4:92e8:dee0:74f9:a1f0:dab5:9c4f
+tls	IN	AAAA	202:daa1:98fc:2192:d74c:a246:72df:b0e0
