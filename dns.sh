@@ -12,5 +12,5 @@ for zone in "$src"/*.zone ; do
     fi
 done
 
-cp -av "$src"/*.zone "$dst"/
+cp -av "$src"/*.zone "$dst"/ || exit
 systemctl $action named
