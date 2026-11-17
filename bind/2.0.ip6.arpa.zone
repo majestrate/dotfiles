@@ -1,0 +1,38 @@
+$ORIGIN 2.0.ip6.arpa.
+$TTL 3600
+@	IN	SOA	ns1.ligma.network. ns2.ligma.network. (
+		2026111701 ; serial
+		3600 ; refresh
+		900 ; retry
+		1209600 ; expire
+		3600 ) ; minimum
+@	IN	NS	ns1.ligma.network.
+@	IN	NS	ns2.ligma.network.
+
+; PTR records for Yggdrasil hosts in ligma.network (200::/8)
+; incog 203:86e6:fdb8:96f8:96d1:6e17:3926:4683
+3.8.6.4.6.2.9.3.7.1.e.6.1.d.6.9.8.f.6.9.8.b.d.f.6.e.6.8.3.0	IN	PTR	incog.ligma.network.
+; buyvm 202:f827:5e04:cf3d:d6db:d902:afb1:b2ed
+d.e.2.b.1.b.f.a.2.0.9.d.b.d.6.d.d.3.f.c.4.0.e.5.7.2.8.f.2.0	IN	PTR	buyvm.ligma.network.
+; hetzner 201:7dc0:1389:b8b3:666c:a06b:481f:bb39
+9.3.b.b.f.1.8.4.b.6.0.a.c.6.6.6.3.b.8.b.9.8.3.1.0.c.d.7.1.0	IN	PTR	hetzner.ligma.network.
+; ovh 201:f5bf:3d9d:2687:2895:1569:9566:eab9
+9.b.a.e.6.6.5.9.9.6.5.1.5.9.8.2.7.8.6.2.d.9.d.3.f.b.5.f.1.0	IN	PTR	ovh.ligma.network.
+; desu 204:ac6c:6d7e:82e3:fa57:2e6e:c00b:e4f1
+1.f.4.e.b.0.0.c.e.6.e.2.7.5.a.f.3.e.2.8.e.7.d.6.c.6.c.a.4.0	IN	PTR	desu.ligma.network.
+; omo 200:8553:3102:616d:b958:54dd:3eb4:af0
+0.f.a.0.4.b.e.3.d.d.4.5.8.5.9.b.d.6.1.6.2.0.1.3.3.5.5.8.0.0	IN	PTR	omo.ligma.network.
+; bread 200:c663:2517:bc49:5d94:e706:8d17:f904
+4.0.9.f.7.1.d.8.6.0.7.e.4.9.d.5.9.4.c.b.7.1.5.2.3.6.6.c.0.0	IN	PTR	bread.ligma.network.
+; pixel 200:c3e:14c7:3f33:4c9d:fb29:e3fe:2a61
+1.6.a.2.e.f.3.e.9.2.b.f.d.9.c.4.3.3.f.3.7.c.4.1.e.3.c.0.0.0	IN	PTR	pixel.ligma.network.
+; swiss 201:1b43:d34d:19b9:d5ee:af59:617b:dab3
+3.b.a.d.b.7.1.6.9.5.f.a.e.e.5.d.9.b.9.1.d.4.3.d.3.4.b.1.1.0	IN	PTR	swiss.ligma.network.
+; qui 200:5ae8:db16:869e:78c4:fbe6:4d60:5246
+6.4.2.5.0.6.d.4.6.e.b.f.4.c.8.7.e.9.6.8.6.1.b.d.8.e.a.5.0.0	IN	PTR	qui.ligma.network.
+; irc 203:b00a:1684:860d:880f:ea9c:92dc:fabb
+b.b.a.f.c.d.2.9.c.9.a.e.f.0.8.8.d.0.6.8.4.8.6.1.a.0.0.b.3.0	IN	PTR	irc.ligma.network.
+; magicka 203:8ac4:92e8:dee0:74f9:a1f0:dab5:9c4f
+f.4.c.9.5.b.a.d.0.f.1.a.9.f.4.7.0.e.e.d.8.e.2.9.4.c.a.8.3.0	IN	PTR	magicka.ligma.network.
+; tls 202:daa1:98fc:2192:d74c:a246:72df:b0e0
+0.e.0.b.f.d.2.7.6.4.2.a.c.4.7.d.2.9.1.2.c.f.8.9.1.a.a.d.2.0	IN	PTR	tls.ligma.network.
